@@ -1,3 +1,7 @@
+body {
+    background: #f5f7fa; // Fondo gris claro
+}
+
 .container {
 	max-width: 1000px;
 	width: 100%;
@@ -9,6 +13,11 @@
 
 header {
 	padding-bottom: 50px;
+    background: url('/images/fondo.png') center/cover no-repeat;
+    color: #fff;
+    padding: 60px 0 50px 0;
+    border-radius: 0 0 24px 24px;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
 
 	@media #{$desktop} {
 		.container {
@@ -355,7 +364,18 @@ footer {
 	}
 }
 
+// Tarjetas con sombra para beneficios
+.thirds li {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    padding: 24px;
+    margin: 12px;
+    border: none;
+}
+
+// Fondo alterno más notorio en secciones .darker
 .darker {
-	background: #f8fafb;
-	padding: 60px 0;
+    background: #e3e8ee;
+    padding: 60px 0;
 }
