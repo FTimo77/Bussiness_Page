@@ -1,22 +1,22 @@
 # ----
 # Site
 
-title: Cause Template
+title: Dolsite Shop
 url: https://dolsite.com
 baseurl:
 google_analytics_key:
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
-logo: /siteicon.png
-description: Jekyll template with example content for a not-for-profit organisation.
+logo: /logo.png
+description: Adquiere soluciones en Software y Biométricos
 author:
-  name:
-  email:
+  name: Dolsite
+  email: 2005maldonado@gmail.com
   twitter: # twitter username without the @ symbol
 social:
-  name: Cause Template
+  name: Dolsite Shop
   links:
-    - https://github.com/CloudCannon/cause-jekyll-template
+    - https://www.facebook.com/profile.php?id=61581708354224
 
 # -----
 # Build
