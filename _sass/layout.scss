@@ -1,28 +1,3 @@
-body {
-	background: #f5f7fa; // Fondo gris claro
-}
-
-header {
-	background: url('/images/tu-imagen.jpg') center/cover no-repeat;
-	color: #fff;
-	padding: 60px 0 50px 0;
-	border-radius: 0 0 24px 24px;
-	box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-}
-
-.thirds li {
-	background: #fff;
-	border-radius: 12px;
-	box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-	padding: 24px;
-	margin: 12px;
-	border: none;
-}
-
-.darker {
-	background: #e3e8ee;
-	padding: 60px 0;
-}
 .container {
 	max-width: 1000px;
 	width: 100%;
