@@ -88,6 +88,10 @@ nav .button {
 			border-radius: 50px;
 		}
 
+		.gradient-bg {
+		  min-height: 100vh;
+		  background: linear-gradient(135deg, #f5f7fa 0%, #c3dafe 100%);
+		}
 		p {
 			font-size: 1.1rem;
 		}
@@ -359,3 +363,5 @@ footer {
 	background: #f8fafb;
 	padding: 60px 0;
 }
+
+
