@@ -4,7 +4,7 @@
 title: Dolsite Tech
 url: https://dolsite.com
 baseurl:
-google_analytics_key:
+google_analytics_key: G-YLGVJ6D4D4
 
 # Values for the jekyll-seo-tag gem (https://github.com/jekyll/jekyll-seo-tag)
 logo: /logo.png
