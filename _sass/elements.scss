@@ -5,9 +5,10 @@ ul, ol {
 li {
 	margin-bottom: 0.7em;
 	background: #fff;
-	border-radius: 8px;
-	box-shadow: 0 1px 6px rgba(0,0,0,0.06);
-	padding: 10px 16px;
+ul, ol {
+  padding-left: 0;
+  margin-bottom: 1.5em;
+}
 	color: #333;
 	list-style-position: inside;
 }
