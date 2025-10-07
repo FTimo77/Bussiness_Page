@@ -1,0 +1,8 @@
+---
+title: SenseFace 3B
+author_staff_member: wooly-mcbaa
+custom_date: ¡Ciento Cincuenta!
+featured_image:  https://new-website-file.s3.ap-southeast-1.amazonaws.com/images/20250604/SenseFace-3A-007.jpg
+---
+
+La serie SenseFace 3 adopta la última autenticación facial de ingeniería inteligente y tecnología de huellas dactilares en vidrio. Es compatible con huellas dactilares, facial, autenticación de tarjetas con gran capacidad y autenticación rápida.
