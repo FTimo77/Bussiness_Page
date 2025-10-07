@@ -26,7 +26,7 @@ title: Biométricos
 </header>
 
 <div class="container section-box">
-  <h2 class="editable section-title">Beneficios</h2>
+  <h2 class="editablen section-title" style="text-align: center">Beneficios</h2>
 
   <ul class="thirds" id="beneficios-list">
     <li>
@@ -57,7 +57,7 @@ title: Biométricos
   </ul>
 </div>
 
-<div class="container section-box">
+<div class="container section-box>
   <div class="columns">
     <div>
       <img
@@ -88,7 +88,7 @@ title: Biométricos
     </div>
   </div>
 
-  <div class="container section-box">
+  <div class="container section-box>
     <hr />
     <blockquote>
       <p class="quote editable">
@@ -135,33 +135,25 @@ title: Biométricos
         {% for post in site.posts %}
         <div class="post">
           <div
-            <div class="darker">
-              <div class="container section-box">
-                <h2 class="editable section-title">Modelos</h2>
-                <p class="editor-link">
-                  <a href="cloudcannon:collections/_posts" class="btn"
-                    ><strong>&#9998;</strong> Add Update</a
-                  >
-                </p>
-                <div class="posts">
-                  {% for post in site.posts %}
-                  <div class="post">
-                    <img class="device-img" src="{{ post.featured_image }}" alt="{{ post.title }}" loading="lazy" />
-                    <div class="post-content">
-                      <p class="date">
-                        {{ post.custom_date | default: post.date | date: '%B %d, %Y' }}
-                      </p>
-                      <h3>{{ post.title }}</h3>
+            class="image"
+            style="background-image: url({{ post.featured_image}})"
+          ></div>
+          <div class="post-content">
+            <p>
+              {{ post.custom_date | default: post.date | date: '%B %d, %Y' }}
+            </p>
+            <h3>{{ post.title }}</h3>
 
-                      {{ post.content }}
-                      <p class="editor-link">
-                        <a href="cloudcannon:collections/{{ post.path }}" class="btn"
-                          ><strong>&#9998;</strong> Edit Update</a
-                        >
-                      </p>
-                    </div>
-                  </div>
-                  {% endfor %}
-                </div>
-              </div>
-            </div>
+            {{ post.content }}
+            <p class="editor-link">
+              <a href="cloudcannon:collections/{{ post.path }}" class="btn"
+                ><strong>&#9998;</strong> Edit Update</a
+              >
+            </p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
