@@ -25,8 +25,8 @@ title: Biométricos
   </div>
 </header>
 
-<div class="container">
-  <h2 class="editable" style="text-align: center">Beneficios</h2>
+<div class="container section-box">
+  <h2 class="editable section-title">Beneficios</h2>
 
   <ul class="thirds" id="beneficios-list">
     <li>
@@ -57,17 +57,18 @@ title: Biométricos
   </ul>
 </div>
 
-<div class="container">
+<div class="container section-box">
   <div class="columns">
     <div>
       <img
         src="{{ site.baseurl }}/images/dedo.webp"
         alt="Cómo funciona un biométrico"
         loading="lazy"
+        class="device-img"
       />
     </div>
     <div>
-      <h2 class="editable">Cómo funciona</h2>
+      <h2 class="editable section-title">Cómo funciona</h2>
 
       <ol>
         <li>
@@ -87,7 +88,7 @@ title: Biométricos
     </div>
   </div>
 
-  <div class="container">
+  <div class="container section-box">
     <hr />
     <blockquote>
       <p class="quote editable">
@@ -110,8 +111,8 @@ title: Biométricos
   </div>
 
   <div class="darker">
-    <div class="container">
-      <h2 class="editable">Regístrate</h2>
+    <div class="container section-box">
+      <h2 class="editable section-title">Regístrate</h2>
       <p class="editable" style="text-align: center">
         Regístrate con tu correo electrónico y nos contactaremos contigo y obtendrás una visita completamente gratis.
       </p>
@@ -134,25 +135,33 @@ title: Biométricos
         {% for post in site.posts %}
         <div class="post">
           <div
-            class="image"
-            style="background-image: url({{ post.featured_image}})"
-          ></div>
-          <div class="post-content">
-            <p>
-              {{ post.custom_date | default: post.date | date: '%B %d, %Y' }}
-            </p>
-            <h3>{{ post.title }}</h3>
+            <div class="darker">
+              <div class="container section-box">
+                <h2 class="editable section-title">Modelos</h2>
+                <p class="editor-link">
+                  <a href="cloudcannon:collections/_posts" class="btn"
+                    ><strong>&#9998;</strong> Add Update</a
+                  >
+                </p>
+                <div class="posts">
+                  {% for post in site.posts %}
+                  <div class="post">
+                    <img class="device-img" src="{{ post.featured_image }}" alt="{{ post.title }}" loading="lazy" />
+                    <div class="post-content">
+                      <p class="date">
+                        {{ post.custom_date | default: post.date | date: '%B %d, %Y' }}
+                      </p>
+                      <h3>{{ post.title }}</h3>
 
-            {{ post.content }}
-            <p class="editor-link">
-              <a href="cloudcannon:collections/{{ post.path }}" class="btn"
-                ><strong>&#9998;</strong> Edit Update</a
-              >
-            </p>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</div>
+                      {{ post.content }}
+                      <p class="editor-link">
+                        <a href="cloudcannon:collections/{{ post.path }}" class="btn"
+                          ><strong>&#9998;</strong> Edit Update</a
+                        >
+                      </p>
+                    </div>
+                  </div>
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
