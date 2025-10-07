@@ -156,3 +156,9 @@ form {
 		background: darken($brand-color, 5%);
 	}
 }
+
+.columns {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+}
