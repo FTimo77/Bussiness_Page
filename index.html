@@ -59,61 +59,48 @@ title: Biométricos
 <div class="container section-box">
   <h2 class="editable section-title" style="text-align: center">Cómo Funciona Nuestro Sistema Biométrico</h2>
   <p class="subtitulo" style="text-align: center; margin-bottom: 24px;">Control de asistencia confiable, rápido y sin complicaciones.</p>
-
-  <div class="columns" style="display: flex; justify-content: center;">
-    <div class="steps" style="max-width: 800px; width: 100%;">
+  <div class="columns" style="display: flex; align-items: flex-start; gap: 40px; flex-wrap: wrap;">
+    <div style="flex: 1 1 320px; min-width: 260px; max-width: 400px;">
       <img
         src="{{ site.baseurl }}/images/dedo.webp"
         alt="Cómo funciona un biométrico"
         loading="lazy"
         class="device-img"
-        style="display: block; margin: 0 auto 24px auto;"
-      />    
-
+        style="display: block; margin: 0 auto 24px auto; max-width: 100%; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.10); background: #f5f7fa;"
+      />
+    </div>
+    <div style="flex: 2 1 400px; min-width: 280px;">
       <ul style="list-style: none; padding: 0; margin: 0;">
-       <li class="step" style="margin-bottom: 24px; text-align: center;">
-  <div style="display: inline-flex; align-items: center; justify-content: center; gap: 24px;">
-    <img src="{{ site.baseurl }}/images/register.svg" alt="Registro del personal" style="width: 50px; height: 50px;">
-    <h3 class="editable section-title" style="font-size: 1.2em; margin: 0;">Paso 1 Registro del Personal</h3>
-  </div>
-  <p class="editable" style="margin-top: 8px;">
-    Registra a tus colaboradores en minutos. Nuestro software permite agregar perfiles y huellas digitales o rostros de forma rápida y segura.
-  </p>
-</li>
-
-<li class="step" style="margin-bottom: 24px; text-align: center;">
-  <div style="display: inline-flex; align-items: center; justify-content: center; gap: 24px;">
-    <img src="{{ site.baseurl }}/images/fingerprint.svg" alt="Marcaje de asistencia" style="width: 50px; height: 50px;">
-    <h3 class="editable section-title" style="font-size: 1.2em; margin: 0;">Paso 2 Marcaje de Asistencia</h3>
-  </div>
-  <p class="editable" style="margin-top: 8px;">
-    Los empleados registran su ingreso y salida mediante huella o reconocimiento facial. Todo queda registrado automáticamente en tiempo real.
-  </p>
-</li>
-
-<li class="step" style="margin-bottom: 24px; text-align: center;">
-  <div style="display: inline-flex; align-items: center; justify-content: center; gap: 24px;">
-    <img src="{{ site.baseurl }}/images/reports.svg" alt="Control y reportes" style="width: 50px; height: 50px;">
-    <h3 class="editable section-title" style="font-size: 1.2em; margin: 0;">Paso 3 Control y Reportes</h3>
-  </div>
-  <p class="editable" style="margin-top: 8px;">
-    Genera reportes detallados de asistencia, retrasos y horas trabajadas. Exporta información para nómina o auditorías sin esfuerzo.
-  </p>
-</li>
-
-<li class="step" style="margin-bottom: 24px; text-align: center;">
-  <div style="display: inline-flex; align-items: center; justify-content: center; gap: 24px;">
-    <img src="{{ site.baseurl }}/images/remote.svg" alt="Gestión remota" style="width: 50px; height: 50px;">
-    <h3 class="editable section-title" style="font-size: 1.2em; margin: 0;">Paso 4 Gestión Remota</h3>
-  </div>
-  <p class="editable" style="margin-top: 8px;">
-    Administra tu equipo desde cualquier lugar. Revisa asistencia, recibe alertas y controla accesos desde tu computadora o celular.
-  </p>
-</li>
-
+        <li class="step" style="margin-bottom: 28px;">
+          <div style="display: flex; align-items: center; gap: 18px;">
+            <img src="{{ site.baseurl }}/images/register.svg" alt="Registro del personal" style="width: 48px; height: 48px;">
+            <h3 class="editable section-title" style="font-size: 1.1em; margin: 0; color: #1a237e;">Paso 1 – Registro del Personal</h3>
+          </div>
+          <p class="editable" style="margin: 8px 0 0 66px;">Registra a tus colaboradores en minutos. Nuestro software permite agregar perfiles y huellas digitales o rostros de forma rápida y segura.</p>
+        </li>
+        <li class="step" style="margin-bottom: 28px;">
+          <div style="display: flex; align-items: center; gap: 18px;">
+            <img src="{{ site.baseurl }}/images/fingerprint.svg" alt="Marcaje de asistencia" style="width: 48px; height: 48px;">
+            <h3 class="editable section-title" style="font-size: 1.1em; margin: 0; color: #1a237e;">Paso 2 – Marcaje de Asistencia</h3>
+          </div>
+          <p class="editable" style="margin: 8px 0 0 66px;">Los empleados registran su ingreso y salida mediante huella o reconocimiento facial. Todo queda registrado automáticamente en tiempo real.</p>
+        </li>
+        <li class="step" style="margin-bottom: 28px;">
+          <div style="display: flex; align-items: center; gap: 18px;">
+            <img src="{{ site.baseurl }}/images/reports.svg" alt="Control y reportes" style="width: 48px; height: 48px;">
+            <h3 class="editable section-title" style="font-size: 1.1em; margin: 0; color: #1a237e;">Paso 3 – Control y Reportes</h3>
+          </div>
+          <p class="editable" style="margin: 8px 0 0 66px;">Genera reportes detallados de asistencia, retrasos y horas trabajadas. Exporta información para nómina o auditorías sin esfuerzo.</p>
+        </li>
+        <li class="step" style="margin-bottom: 28px;">
+          <div style="display: flex; align-items: center; gap: 18px;">
+            <img src="{{ site.baseurl }}/images/remote.svg" alt="Gestión remota" style="width: 48px; height: 48px;">
+            <h3 class="editable section-title" style="font-size: 1.1em; margin: 0; color: #1a237e;">Paso 4 – Gestión Remota</h3>
+          </div>
+          <p class="editable" style="margin: 8px 0 0 66px;">Administra tu equipo desde cualquier lugar. Revisa asistencia, recibe alertas y controla accesos desde tu computadora o celular.</p>
+        </li>
       </ul>
-
-      <div class="cta" style="margin-top: 24px; text-align: center;">
+      <div class="cta" style="margin-top: 24px; text-align: left; margin-left: 66px;">
         <p class="editable">Simplifica el control de asistencia de tu empresa y elimina errores o fraudes.</p>
         <a href="#contacto" class="btn-cta">Solicita tu demo gratuita hoy</a>
       </div>
