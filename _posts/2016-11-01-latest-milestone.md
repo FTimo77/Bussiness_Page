@@ -1,7 +1,7 @@
 ---
-title: We've raised $2000!
+title: Software BioTime
 author_staff_member: wooly-mcbaa
-date: 2016-11-01
-featured_image: https://unsplash.it/570/400?image=1080
+date: ¡Gratis!
+featured_image: https://zktecolatinoamerica.com/wp-content/uploads/2024/01/biotime-pro-asistencia-en-web-zkteco-min.png
 ---
-Thank you do everyone who has made contributions. This money is going towards reaching sheep in paddocks far and wide. The revolution has begun.
+Registra el control horario de tus empleados, las horas laboradas, faltas, permisos e incidencias, aumenta su productividad y reduce las faltas en tu empresa.
