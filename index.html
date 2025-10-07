@@ -138,7 +138,7 @@ title: Inicio
             style="background-image: url({{ post.featured_image}})"
           ></div>
           <div class="post-content">
-            <p class="date">
+            <p>
               {{ post.custom_date | default: post.date | date: '%B %d, %Y' }}
             </p>
             <h3>{{ post.title }}</h3>
