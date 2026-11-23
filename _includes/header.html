@@ -1,11 +1,37 @@
+<div class="header-topbar" aria-label="Información de contacto rápido">
+  <div class="container topbar-inner">
+    <span class="topbar-location">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z"/>
+      </svg>
+      <span>Ambato · Instalación y cobertura en todo Ecuador</span>
+    </span>
+    <div class="topbar-contacts">
+      <a href="tel:{{ site.data.company.phone_raw }}" class="topbar-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/>
+        </svg>
+        <span>{{ site.data.company.phone }}</span>
+      </a>
+      <span class="topbar-sep" aria-hidden="true">|</span>
+      <a href="mailto:{{ site.data.company.email }}" class="topbar-link">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+        <span>{{ site.data.company.email }}</span>
+      </a>
+    </div>
+  </div>
+</div>
+
 <header class="site-header" id="site-header">
   <div class="container header-inner">
     <a class="brand-link" href="{{ site.baseurl }}/" aria-label="Dolsite — Ir al inicio">
       <img
         src="{{ site.baseurl }}{{ site.logo }}"
         alt="Logotipo de Dolsite Soluciones Informáticas y Biométricos"
-        width="48"
-        height="48"
+        width="44"
+        height="44"
         class="brand-logo"
       />
       <span class="brand-text">
@@ -39,7 +65,7 @@
           <a href="{{ site.baseurl }}/software-a-medida/" {% if page.url contains "/software-a-medida" %}class="is-active" aria-current="page"{% endif %}>Software a Medida</a>
         </li>
         <li>
-          <a href="{{ site.baseurl }}/#preguntas-frecuentes">Preguntas Frecuentes</a>
+          <a href="{{ site.baseurl }}/#preguntas-frecuentes">FAQ</a>
         </li>
         <li>
           <a href="{{ site.baseurl }}/contacto/" {% if page.url contains "/contacto" %}class="is-active" aria-current="page"{% endif %}>Contacto</a>
@@ -48,17 +74,17 @@
 
       <div class="nav-actions">
         <a
-          class="nav-phone"
+          class="nav-phone-mobile"
           href="tel:{{ site.data.company.phone_raw }}"
           aria-label="Llamar a Dolsite al {{ site.data.company.phone }}"
         >
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1.02-.24c1.12.37 2.33.57 3.57.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.61 21 3 13.39 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1.02l-2.2 2.2z"/>
           </svg>
-          <span>{{ site.data.company.phone }}</span>
+          <span>Llamar: {{ site.data.company.phone }}</span>
         </a>
-        <a class="btn btn-primary btn-sm" href="{{ site.baseurl }}/contacto/#cotizar">
-          Solicitar Cotización
+        <a class="btn btn-primary btn-nav" href="{{ site.baseurl }}/contacto/#cotizar">
+          Cotizar ahora
         </a>
       </div>
     </nav>

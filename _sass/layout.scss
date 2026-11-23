@@ -64,14 +64,76 @@
   color: #CBD5E1;
 }
 
+// Top Utility Bar (Desktop B2B Contact Strip)
+.header-topbar {
+  display: none;
+  background-color: $navy-950;
+  color: #CBD5E1;
+  font-size: 0.8rem;
+  border-bottom: 1px solid $navy-800;
+
+  @media #{$desktop} {
+    display: block;
+  }
+}
+
+.topbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 36px;
+  gap: 1.5rem;
+}
+
+.topbar-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: #94A3B8;
+
+  svg {
+    color: $emerald-500;
+    flex-shrink: 0;
+  }
+}
+
+.topbar-contacts {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.9rem;
+}
+
+.topbar-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #CBD5E1;
+  font-weight: 500;
+  white-space: nowrap;
+
+  svg {
+    color: $emerald-500;
+    flex-shrink: 0;
+  }
+
+  &:hover {
+    color: $surface-white;
+  }
+}
+
+.topbar-sep {
+  color: #334155;
+}
+
 // Sticky Site Header
 .site-header {
   position: sticky;
   top: 0;
   z-index: 900;
-  background-color: rgba(255, 255, 255, 0.96);
+  background-color: rgba(255, 255, 255, 0.97);
   border-bottom: 1px solid $border-light;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.04);
+  backdrop-filter: blur(12px);
 }
 
 .header-inner {
@@ -79,7 +141,7 @@
   align-items: center;
   justify-content: space-between;
   min-height: 76px;
-  gap: 1.25rem;
+  gap: 2rem;
 }
 
 .brand-link {
@@ -95,8 +157,8 @@
 }
 
 .brand-logo {
-  width: 46px;
-  height: 46px;
+  width: 44px;
+  height: 44px;
   object-fit: contain;
   border-radius: $radius-sm;
 }
@@ -130,13 +192,27 @@
   width: 42px;
   height: 42px;
   padding: 0 9px;
-  background: transparent;
+  background: $surface-white;
   border: 1px solid $border-medium;
   border-radius: $radius-sm;
   cursor: pointer;
 
   @media #{$desktop} {
     display: none;
+  }
+
+  &[aria-expanded="true"] {
+    .nav-toggle-bar:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+    }
+
+    .nav-toggle-bar:nth-child(2) {
+      opacity: 0;
+    }
+
+    .nav-toggle-bar:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+    }
   }
 }
 
@@ -158,7 +234,7 @@
   background-color: $surface-white;
   border-bottom: 1px solid $border-light;
   box-shadow: $shadow-lg;
-  padding: 1.25rem;
+  padding: 1.25rem 1.5rem 1.5rem 1.5rem;
 
   &.is-open {
     display: block;
@@ -168,8 +244,8 @@
     display: flex;
     position: static;
     align-items: center;
-    justify-content: flex-end;
-    gap: 1.75rem;
+    justify-content: space-between;
+    gap: 2rem;
     background: transparent;
     border: 0;
     box-shadow: none;
@@ -184,26 +260,59 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.25rem;
 
   @media #{$desktop} {
     flex-direction: row;
     align-items: center;
-    gap: 0.25rem;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
   }
 
   a {
     display: block;
-    padding: 0.6rem 0.8rem;
+    position: relative;
+    padding: 0.7rem 0.75rem;
     font-size: 0.94rem;
-    font-weight: 600;
+    font-weight: 500;
     color: $ink-700;
     border-radius: $radius-sm;
+    white-space: nowrap;
 
     &:hover,
     &.is-active {
       color: $navy-900;
+      font-weight: 600;
       background-color: $surface-muted;
+    }
+
+    @media #{$desktop} {
+      padding: 0.5rem 0;
+      border-radius: 0;
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -2px;
+        height: 2px;
+        background-color: $emerald-600;
+        transform: scaleX(0);
+        transform-origin: left center;
+        transition: transform $transition-base;
+      }
+
+      &:hover,
+      &.is-active {
+        background-color: transparent;
+        color: $navy-900;
+
+        &::after {
+          transform: scaleX(1);
+        }
+      }
     }
   }
 }
@@ -212,27 +321,32 @@
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  margin-top: 1rem;
-  padding-top: 1rem;
+  margin-top: 1.1rem;
+  padding-top: 1.1rem;
   border-top: 1px solid $border-light;
+  flex-shrink: 0;
 
   @media #{$desktop} {
     flex-direction: row;
     align-items: center;
-    gap: 1rem;
     margin-top: 0;
     padding-top: 0;
     border-top: 0;
   }
 }
 
-.nav-phone {
+.nav-phone-mobile {
   display: inline-flex;
   align-items: center;
-  gap: 0.45rem;
-  font-size: 0.9rem;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1rem;
+  font-size: 0.92rem;
   font-weight: 600;
   color: $navy-900;
+  background-color: $surface-alt;
+  border: 1px solid $border-light;
+  border-radius: $radius-md;
   white-space: nowrap;
 
   svg {
@@ -240,9 +354,15 @@
     flex-shrink: 0;
   }
 
-  &:hover {
-    color: $emerald-700;
+  @media #{$desktop} {
+    display: none;
   }
+}
+
+.btn-nav {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
 }
 
 // Hero Layouts
