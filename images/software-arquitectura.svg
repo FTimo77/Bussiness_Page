@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 460" width="640" height="460" role="img" aria-labelledby="title-soft desc-soft">
+  <title id="title-soft">Arquitectura de Software Empresarial a la Medida Dolsite</title>
+  <desc id="desc-soft">Diagrama técnico de un ecosistema empresarial integrado con ERP, Facturación Electrónica SRI, Control Biométrico y Nómina en la nube.</desc>
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0B1F3A"/>
+      <stop offset="100%" stop-color="#102A43"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#040D1A" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <rect width="640" height="460" rx="18" fill="url(#bgGrad)"/>
+
+  <!-- Top window bar -->
+  <rect x="28" y="26" width="584" height="408" rx="12" fill="#0F2644" stroke="#1E3A5F" stroke-width="1.5"/>
+  <circle cx="52" cy="48" r="5" fill="#475569"/>
+  <circle cx="70" cy="48" r="5" fill="#475569"/>
+  <circle cx="88" cy="48" r="5" fill="#10B981"/>
+  <text x="112" y="52" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="12" font-weight="600">DOLSITE ENTERPRISE SUITE · ARQUITECTURA A MEDIDA</text>
+  <line x1="28" y1="68" x2="612" y2="68" stroke="#1E3A5F" stroke-width="1"/>
+
+  <!-- Connection lines -->
+  <g stroke="#10B981" stroke-width="2" stroke-dasharray="5 5" opacity="0.65">
+    <line x1="320" y1="184" x2="164" y2="132"/>
+    <line x1="320" y1="184" x2="476" y2="132"/>
+    <line x1="320" y1="268" x2="164" y2="328"/>
+    <line x1="320" y1="268" x2="476" y2="328"/>
+  </g>
+
+  <!-- Central Core Hub -->
+  <g filter="url(#cardShadow)">
+    <rect x="215" y="178" width="210" height="96" rx="12" fill="#FFFFFF"/>
+    <rect x="215" y="178" width="210" height="8" rx="4" fill="#059669"/>
+    <text x="320" y="214" text-anchor="middle" fill="#0B1F3A" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="15" font-weight="800">Núcleo ERP a Medida</text>
+    <text x="320" y="236" text-anchor="middle" fill="#475569" font-family="Inter, Arial, sans-serif" font-size="11.5">Reglas de negocio · API REST</text>
+    <text x="320" y="254" text-anchor="middle" fill="#059669" font-family="Inter, Arial, sans-serif" font-size="11" font-weight="700">100% Adaptado a tu Operación</text>
+  </g>
+
+  <!-- Top Left Module: Facturación SRI -->
+  <g filter="url(#cardShadow)">
+    <rect x="52" y="92" width="210" height="78" rx="10" fill="#163255" stroke="#264C7A" stroke-width="1"/>
+    <rect x="68" y="108" width="32" height="32" rx="7" fill="#059669"/>
+    <path d="M78 124h12M78 119h12M78 129h8" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"/>
+    <text x="112" y="122" fill="#FFFFFF" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="13" font-weight="700">Facturación SRI</text>
+    <text x="112" y="140" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="11">Comprobantes electrónicos</text>
+    <text x="112" y="155" fill="#6EE7B7" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="600">Firma XML y envío automático</text>
+  </g>
+
+  <!-- Top Right Module: Inventario y Compras -->
+  <g filter="url(#cardShadow)">
+    <rect x="378" y="92" width="210" height="78" rx="10" fill="#163255" stroke="#264C7A" stroke-width="1"/>
+    <rect x="394" y="108" width="32" height="32" rx="7" fill="#0284C7"/>
+    <rect x="403" y="117" width="14" height="14" rx="2" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <text x="438" y="122" fill="#FFFFFF" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="13" font-weight="700">Inventarios &amp; Bodegas</text>
+    <text x="438" y="140" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="11">Kardex multi-sucursal</text>
+    <text x="438" y="155" fill="#7DD3FC" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="600">Alertas de stock en vivo</text>
+  </g>
+
+  <!-- Bottom Left Module: Integración Biométrica -->
+  <g filter="url(#cardShadow)">
+    <rect x="52" y="294" width="210" height="82" rx="10" fill="#163255" stroke="#264C7A" stroke-width="1"/>
+    <rect x="68" y="310" width="32" height="32" rx="7" fill="#059669"/>
+    <circle cx="84" cy="326" r="7" fill="none" stroke="#FFFFFF" stroke-width="2"/>
+    <circle cx="84" cy="326" r="2.5" fill="#FFFFFF"/>
+    <text x="112" y="324" fill="#FFFFFF" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="13" font-weight="700">Nómina &amp; Biométricos</text>
+    <text x="112" y="342" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="11">Conexión ZKTeco / BioTime</text>
+    <text x="112" y="358" fill="#6EE7B7" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="600">Horas extras y roles automáticos</text>
+  </g>
+
+  <!-- Bottom Right Module: Analítica Gerencial -->
+  <g filter="url(#cardShadow)">
+    <rect x="378" y="294" width="210" height="82" rx="10" fill="#163255" stroke="#264C7A" stroke-width="1"/>
+    <rect x="394" y="310" width="32" height="32" rx="7" fill="#0284C7"/>
+    <path d="M402 333v-7M408 333v-12M414 333v-16" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round"/>
+    <text x="438" y="324" fill="#FFFFFF" font-family="Plus Jakarta Sans, Arial, sans-serif" font-size="13" font-weight="700">Reportes Gerenciales</text>
+    <text x="438" y="342" fill="#CBD5E1" font-family="Inter, Arial, sans-serif" font-size="11">KPIs y exportación Excel/PDF</text>
+    <text x="438" y="358" fill="#7DD3FC" font-family="Inter, Arial, sans-serif" font-size="10.5" font-weight="600">Acceso seguro web y móvil</text>
+  </g>
+
+  <!-- Status Footer -->
+  <rect x="52" y="394" width="536" height="26" rx="6" fill="#0B1F3A"/>
+  <text x="70" y="411" fill="#94A3B8" font-family="Inter, Arial, sans-serif" font-size="11">Despliegue en la nube o servidor local · Respaldos automáticos · Soporte directo en Ecuador</text>
+</svg>

@@ -1,179 +1,179 @@
-.step {
-	display: flex;
-	align-items: center;
-	gap: 16px;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-.step .icon {
-	flex-shrink: 0;
-	width: 48px;
-	height: 48px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
-.step h3 {
-	margin: 0;
-	font-size: 1.2em;
-}
-/* Sección: Beneficios, Modelos, Testimonios */
-.section-box {
-	background: #fff;
-	border-radius: 18px;
-	box-shadow: 0 4px 24px rgba(0,0,0,0.08);
-	padding: 32px 24px;
-	margin-bottom: 40px;
-}
-
-.section-title {
-	font-size: 2.2em;
-	font-weight: 700;
-	color: #1a237e;
-	margin-bottom: 24px;
-	text-align: center;
+body.site-body {
+  margin: 0;
+  padding: 0;
+  font-family: $font-body;
+  color: $ink-700;
+  background-color: $surface-white;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
-/* Imágenes de dispositivos */
-.device-img {
-	display: block;
-	margin: 0 auto 16px auto;
-	max-width: 520px;
-	width: 100%;
-	height: auto;
-	border-radius: 12px;
-	box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-	background: #f5f7fa;
-}
-ul#beneficios-list, ol#beneficios-list {
-	padding-left: 0 !important;
-}
-ul, ol {
-	margin-bottom: 1.5em;
+img,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
-li {
-	margin-bottom: 0.7em;
-	background: #fff;
-ul, ol {
-  padding-left: 0;
-  margin-bottom: 1.5em;
-}
-	color: #333;
-	list-style-position: inside;
-}
-html, body {
-	padding: 0;
-	margin: 0;
-	font-family: 'Open Sans', sans-serif;
-	color: #333;
-	min-width: 380px;
+a {
+  color: $sky-700;
+  text-decoration: none;
+  transition: color $transition-base;
+
+  &:hover {
+    color: $navy-900;
+  }
 }
 
-img {
-	max-width: 100%;
-}
-
-hr {
-	height:1px;
-	border: 0;
-	background-color: #ddd;
-	margin-bottom: 50px;
+h1,
+h2,
+h3,
+h4 {
+  font-family: $font-display;
+  color: $ink-900;
+  margin-top: 0;
+  letter-spacing: -0.025em;
+  line-height: 1.2;
 }
 
 h1 {
-	padding: 0;
-	margin: 0 0 20px 0;
-	font-size: 3em;
-	font-weight: 700;
+  font-size: 2.15rem;
+  font-weight: 800;
+  margin-bottom: 1.1rem;
+
+  @media #{$tablet} {
+    font-size: 2.75rem;
+  }
+
+  @media #{$desktop} {
+    font-size: 3.1rem;
+    line-height: 1.12;
+  }
 }
 
 h2 {
-	font-size: 2.3em;
-	margin: 0 0 30px 0;
-	text-align: center;
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+
+  @media #{$tablet} {
+    font-size: 2.15rem;
+  }
 }
 
 h3 {
-	font-size: 1.8em;
-	margin: 20px 0 20px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
 }
 
 p {
-	font-size: 1.3em;
-	line-height: 1.4em;
-	color: #888;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: $ink-700;
 }
 
-nav {
-	padding: 30px 0;
-	svg {
-		fill: $brand-color;
-		height: 35px;
-	}
+ul,
+ol {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
 }
 
-section {
-	padding: 60px 0;
+address {
+  font-style: normal;
 }
 
-form {
-	display: flex;
-	max-width: 500px;
-	margin: 0 auto;
+// Accessibility skip link
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  background: $navy-900;
+  color: $surface-white;
+  font-weight: 600;
+  border-radius: 0 0 $radius-sm 0;
 
-	input[type="text"] {
-		flex-grow: 1;
-		flex-shrink: 1;
-		width: 100%;
-		border: 1px solid #ddd;
-
-
-		&, &:focus {
-			border-top-left-radius: 30px;
-			border-bottom-left-radius: 30px;
-		}
-
-		&:focus {
-			box-shadow: 0 0 5px 0 $brand-color;
-			outline: none;
-		}
-	}
-
-	input[type="submit"] {
-		border-top-right-radius: 30px;
-		border-bottom-right-radius: 30px;
-
-		&:hover {
-			background: darken($brand-color, 5%);
-		}
-	}
+  &:focus {
+    left: 0;
+  }
 }
 
-.button a, input[type="submit"], input[type="text"] {
-	border: 0;
-	padding: 15px 40px;
-	box-sizing: content-box;
-	font-size: 1em;
-	font-weight: 100;
+// Focus styles
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+summary:focus-visible {
+  outline: 3px solid $sky-600;
+  outline-offset: 2px;
 }
 
-.button a, input[type="submit"] {
-	background: $brand-color;
-	color: #fff;
-	cursor: pointer;
-	font-weight: bold;
+.eyebrow {
+  font-family: $font-display;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: $emerald-700;
+  margin-bottom: 0.75rem;
 }
 
-.button a {
-	display: inline-block;
-	text-decoration: none;
-	border-radius: 30px;
-	transition: 200ms ease-in background;
-
-	&:hover {
-		background: darken($brand-color, 5%);
-	}
+.eyebrow-light {
+  color: $emerald-500;
 }
 
+.lead {
+  font-size: 1.08rem;
+  line-height: 1.65;
+  color: $ink-700;
 
+  @media #{$tablet} {
+    font-size: 1.15rem;
+  }
+}
+
+// CloudCannon Visual Editor Link Support
+.editor-link {
+  display: none;
+  margin: 0 0 1.25rem 0;
+
+  .btn-editor {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background-color: #F7E064;
+    color: $ink-900;
+    font-size: 0.9rem;
+    font-weight: 600;
+    border-radius: $radius-sm;
+    box-shadow: $shadow-sm;
+
+    &:hover {
+      background-color: #F4D525;
+      color: $ink-900;
+    }
+  }
+}
+
+.cms-editor-active .editor-link {
+  display: block;
+}

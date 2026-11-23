@@ -1,0 +1,1064 @@
+// Buttons
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.35rem;
+  font-family: $font-body;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: $radius-md;
+  border: 1.5px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color $transition-base, color $transition-base, border-color $transition-base, transform $transition-base, box-shadow $transition-base;
+
+  &:active {
+    transform: translateY(1px);
+  }
+}
+
+.btn-sm {
+  padding: 0.58rem 1.05rem;
+  font-size: 0.88rem;
+}
+
+.btn-lg {
+  padding: 0.92rem 1.65rem;
+  font-size: 1rem;
+}
+
+.btn-primary {
+  background-color: $emerald-600;
+  color: $surface-white;
+  box-shadow: 0 4px 12px rgba(5, 150, 105, 0.25);
+
+  &:hover {
+    background-color: $emerald-700;
+    color: $surface-white;
+    box-shadow: 0 6px 18px rgba(4, 120, 87, 0.32);
+  }
+}
+
+.btn-secondary {
+  background-color: $surface-white;
+  color: $navy-900;
+  border-color: $border-medium;
+
+  &:hover {
+    background-color: $surface-muted;
+    color: $navy-900;
+    border-color: $navy-900;
+  }
+}
+
+.hero .btn-secondary,
+.page-hero .btn-secondary,
+.section-dark .btn-secondary {
+  background-color: rgba(255, 255, 255, 0.08);
+  color: $surface-white;
+  border-color: rgba(255, 255, 255, 0.35);
+
+  &:hover {
+    background-color: $surface-white;
+    color: $navy-900;
+    border-color: $surface-white;
+  }
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: $navy-900;
+  border-color: $navy-900;
+
+  &:hover {
+    background-color: $navy-900;
+    color: $surface-white;
+  }
+}
+
+.btn-outline-emerald {
+  background-color: $emerald-50;
+  color: $emerald-700;
+  border-color: $emerald-600;
+
+  &:hover {
+    background-color: $emerald-600;
+    color: $surface-white;
+  }
+}
+
+// Trust Bar Strip
+.trust-strip {
+  background-color: $surface-white;
+  border-bottom: 1px solid $border-light;
+  padding: 1.5rem 0;
+}
+
+.trust-strip-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+
+  @media #{$desktop} {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+.trust-metric {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
+
+  strong {
+    font-family: $font-display;
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: $navy-900;
+  }
+
+  span {
+    font-size: 0.86rem;
+    color: $ink-500;
+  }
+}
+
+// Cards
+.card {
+  background-color: $surface-white;
+  border: 1px solid $border-light;
+  border-radius: $radius-lg;
+  padding: 1.75rem;
+  box-shadow: $shadow-sm;
+  transition: transform $transition-base, box-shadow $transition-base, border-color $transition-base;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-md;
+    border-color: $border-medium;
+  }
+
+  p:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: $radius-md;
+  background-color: $emerald-50;
+  color: $emerald-700;
+  margin-bottom: 1.15rem;
+
+  svg {
+    width: 26px;
+    height: 26px;
+    fill: currentColor;
+  }
+
+  img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+}
+
+.card-icon-blue {
+  background-color: $sky-100;
+  color: $sky-700;
+}
+
+.card-dark {
+  background-color: $navy-800;
+  border: 1px solid $navy-700;
+  border-radius: $radius-lg;
+  padding: 1.75rem;
+
+  h3 {
+    color: $surface-white;
+  }
+
+  p {
+    color: #CBD5E1;
+    margin-bottom: 0;
+  }
+}
+
+// Check Lists
+.check-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+
+  li {
+    position: relative;
+    padding-left: 1.65rem;
+    color: $ink-700;
+    font-size: 0.96rem;
+
+    &::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      top: 0;
+      font-weight: 800;
+      color: $emerald-600;
+    }
+  }
+}
+
+.section-dark .check-list li {
+  color: #E2E8F0;
+
+  &::before {
+    color: $emerald-500;
+  }
+}
+
+// Step Process Cards
+.step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 999px;
+  background-color: $navy-900;
+  color: $surface-white;
+  font-family: $font-display;
+  font-size: 0.88rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.section-dark .step-number {
+  background-color: $emerald-600;
+}
+
+.media-showcase {
+  border-radius: $radius-lg;
+  overflow: hidden;
+  border: 1px solid $border-light;
+  background-color: $surface-white;
+  box-shadow: $shadow-md;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+}
+
+.workflow-steps {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.15rem;
+
+  @media #{$tablet} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.workflow-step-card {
+  background-color: $surface-white;
+  border: 1px solid $border-light;
+  border-radius: $radius-md;
+  padding: 1.25rem;
+
+  .step-head {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .step-icon {
+    width: 36px;
+    height: 36px;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  h3 {
+    font-size: 1.02rem;
+    margin: 0;
+  }
+
+  p {
+    font-size: 0.92rem;
+    color: $ink-500;
+    margin: 0;
+  }
+}
+
+// Pricing / Packages
+.pricing-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $surface-white;
+  border: 1.5px solid $border-light;
+  border-radius: $radius-lg;
+  padding: 2rem 1.75rem;
+  box-shadow: $shadow-sm;
+  position: relative;
+
+  &.is-featured {
+    border-color: $navy-900;
+    box-shadow: $shadow-lg;
+  }
+}
+
+.pricing-badge {
+  position: absolute;
+  top: -13px;
+  left: 1.75rem;
+  background-color: $navy-900;
+  color: $surface-white;
+  font-family: $font-display;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 999px;
+}
+
+.pricing-tier {
+  font-size: 1.25rem;
+  margin-bottom: 0.35rem;
+}
+
+.pricing-price {
+  font-family: $font-display;
+  font-size: 2.35rem;
+  font-weight: 800;
+  color: $navy-900;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+
+  span {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: $ink-500;
+  }
+}
+
+.pricing-desc {
+  font-size: 0.94rem;
+  color: $ink-500;
+  margin-bottom: 1.35rem;
+}
+
+.pricing-card .check-list {
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+
+.pricing-card .btn {
+  width: 100%;
+}
+
+// Catalog / Posts Grid
+.catalog-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+
+  @media #{$tablet} {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media #{$desktop} {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background-color: $surface-white;
+  border: 1px solid $border-light;
+  border-radius: $radius-lg;
+  overflow: hidden;
+  box-shadow: $shadow-sm;
+  transition: transform $transition-base, box-shadow $transition-base;
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: $shadow-md;
+  }
+}
+
+.product-card-media {
+  background-color: $surface-alt;
+  border-bottom: 1px solid $border-light;
+  aspect-ratio: 4 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.product-card-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+  h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.45rem;
+
+    a {
+      color: $ink-900;
+
+      &:hover {
+        color: $emerald-700;
+      }
+    }
+  }
+}
+
+.product-card-price {
+  font-family: $font-display;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $emerald-700;
+  margin-bottom: 0.5rem;
+}
+
+.product-card-excerpt {
+  font-size: 0.93rem;
+  color: $ink-500;
+  flex: 1;
+  margin-bottom: 1.25rem;
+
+  p {
+    margin: 0;
+    color: $ink-500;
+  }
+}
+
+.product-card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding-top: 1rem;
+  border-top: 1px solid $border-light;
+}
+
+.text-link {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: $sky-700;
+
+  &:hover {
+    color: $navy-900;
+    text-decoration: underline;
+  }
+}
+
+// Product Detail Page
+.product-detail-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+
+  @media #{$desktop} {
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 3.5rem;
+  }
+}
+
+.product-detail-media {
+  background-color: $surface-white;
+  border: 1px solid $border-light;
+  border-radius: $radius-lg;
+  padding: 1.75rem;
+  box-shadow: $shadow-sm;
+}
+
+.product-detail-img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.product-price-tag {
+  display: inline-block;
+  font-family: $font-display;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: $emerald-700;
+  background-color: $emerald-50;
+  padding: 0.35rem 0.85rem;
+  border-radius: $radius-sm;
+  margin-bottom: 1.25rem;
+}
+
+.internal-links-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+// Software Capabilities & Tech Stack Tags
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.tech-tag {
+  font-size: 0.82rem;
+  font-weight: 600;
+  padding: 0.35rem 0.75rem;
+  border-radius: $radius-sm;
+  background-color: $navy-800;
+  border: 1px solid $navy-700;
+  color: #E2E8F0;
+}
+
+.tech-tag-light {
+  background-color: $surface-muted;
+  border: 1px solid $border-light;
+  color: $navy-900;
+}
+
+// Testimonial / Social Proof
+.testimonial-box {
+  background-color: $surface-white;
+  border: 1px solid $border-light;
+  border-radius: $radius-xl;
+  padding: 2rem;
+  box-shadow: $shadow-md;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.75rem;
+  align-items: center;
+
+  @media #{$desktop} {
+    padding: 2.75rem 3rem;
+    grid-template-columns: 1.4fr 0.6fr;
+  }
+}
+
+.testimonial-quote {
+  margin: 0;
+  padding: 0;
+
+  p {
+    font-size: 1.15rem;
+    line-height: 1.65;
+    color: $ink-900;
+    font-weight: 500;
+    margin-bottom: 1.25rem;
+
+    @media #{$tablet} {
+      font-size: 1.25rem;
+    }
+  }
+}
+
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+
+  img {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: $radius-md;
+    border: 1px solid $border-light;
+    padding: 4px;
+    background-color: $surface-white;
+  }
+
+  strong {
+    display: block;
+    font-family: $font-display;
+    color: $navy-900;
+    font-size: 1rem;
+  }
+
+  span {
+    display: block;
+    font-size: 0.86rem;
+    color: $ink-500;
+  }
+}
+
+.testimonial-kpi {
+  background-color: $surface-alt;
+  border: 1px solid $border-light;
+  border-radius: $radius-lg;
+  padding: 1.5rem;
+  text-align: center;
+
+  .kpi-value {
+    display: block;
+    font-family: $font-display;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: $emerald-700;
+    line-height: 1.1;
+  }
+
+  .kpi-label {
+    display: block;
+    font-size: 0.9rem;
+    color: $ink-700;
+    margin-top: 0.4rem;
+  }
+}
+
+// FAQ Accordion
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.faq-item {
+  background-color: $surface-white;
+  border: 1px solid $border-light;
+  border-radius: $radius-md;
+  overflow: hidden;
+  transition: border-color $transition-base, box-shadow $transition-base;
+
+  &[open] {
+    border-color: $navy-900;
+    box-shadow: $shadow-sm;
+  }
+}
+
+.faq-question {
+  list-style: none;
+  padding: 1.15rem 1.35rem;
+  font-family: $font-display;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: $ink-900;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+
+  &::after {
+    content: "+";
+    font-size: 1.35rem;
+    font-weight: 600;
+    color: $emerald-700;
+    flex-shrink: 0;
+    line-height: 1;
+  }
+}
+
+.faq-item[open] .faq-question::after {
+  content: "−";
+}
+
+.faq-answer {
+  padding: 0 1.35rem 1.25rem 1.35rem;
+  font-size: 0.95rem;
+  color: $ink-700;
+  border-top: 1px solid $surface-muted;
+  padding-top: 0.9rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+// Quote Form & Bot Protection
+.quote-panel {
+  background-color: $surface-white;
+  border: 1px solid $border-light;
+  border-radius: $radius-xl;
+  padding: 1.75rem;
+  box-shadow: $shadow-lg;
+
+  @media #{$tablet} {
+    padding: 2.5rem;
+  }
+}
+
+.quote-form {
+  display: block;
+}
+
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.1rem;
+
+  @media #{$tablet} {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+
+  label {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: $ink-900;
+  }
+
+  .req {
+    color: $danger-600;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 0.78rem 0.95rem;
+    font-family: $font-body;
+    font-size: 0.95rem;
+    color: $ink-900;
+    background-color: $surface-white;
+    border: 1.5px solid $border-medium;
+    border-radius: $radius-md;
+    transition: border-color $transition-base, box-shadow $transition-base;
+
+    &:focus {
+      outline: none;
+      border-color: $sky-600;
+      box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.16);
+    }
+  }
+
+  textarea {
+    resize: vertical;
+    min-height: 92px;
+  }
+}
+
+.form-group-full {
+  margin-top: 1.15rem;
+}
+
+.bot-check-box {
+  margin-top: 1.35rem;
+  padding: 1.15rem 1.25rem;
+  background-color: $surface-alt;
+  border: 1.5px solid $border-medium;
+  border-radius: $radius-md;
+  transition: border-color $transition-base, background-color $transition-base;
+
+  &.is-verified {
+    border-color: $emerald-600;
+    background-color: $emerald-50;
+  }
+
+  &.is-error {
+    border-color: $danger-600;
+    background-color: $danger-50;
+  }
+}
+
+.bot-check-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: $font-display;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: $navy-900;
+  margin-bottom: 0.7rem;
+
+  svg {
+    color: $emerald-700;
+    flex-shrink: 0;
+  }
+}
+
+.bot-check-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+
+  @media #{$tablet} {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.bot-question {
+  font-size: 0.92rem;
+  color: $ink-700;
+
+  strong {
+    color: $navy-900;
+    font-size: 1rem;
+  }
+}
+
+.bot-input-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.bot-input {
+  width: 115px !important;
+  padding: 0.58rem 0.75rem !important;
+  font-family: $font-display;
+  font-size: 1rem;
+  font-weight: 700;
+  text-align: center;
+  border: 1.5px solid $border-medium;
+  border-radius: $radius-sm;
+  background-color: $surface-white;
+  color: $ink-900;
+
+  &.is-valid {
+    border-color: $emerald-600;
+  }
+
+  &.is-invalid {
+    border-color: $danger-600;
+  }
+}
+
+.bot-refresh {
+  padding: 0.58rem 0.8rem;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: $navy-900;
+  background-color: $surface-white;
+  border: 1px solid $border-medium;
+  border-radius: $radius-sm;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $surface-muted;
+  }
+}
+
+.bot-status {
+  font-size: 0.82rem;
+  color: $ink-500;
+  margin: 0.6rem 0 0 0;
+
+  &.is-verified {
+    color: $emerald-700;
+    font-weight: 600;
+  }
+
+  &.is-error {
+    color: $danger-600;
+    font-weight: 600;
+  }
+}
+
+.form-feedback {
+  margin-top: 1rem;
+  padding: 0.85rem 1rem;
+  border-radius: $radius-md;
+  font-size: 0.92rem;
+  font-weight: 600;
+
+  &.is-error {
+    background-color: $danger-50;
+    border: 1px solid $danger-200;
+    color: $danger-600;
+  }
+
+  &.is-success {
+    background-color: $emerald-50;
+    border: 1px solid $emerald-100;
+    color: $emerald-700;
+  }
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-top: 1.35rem;
+}
+
+.form-privacy-note {
+  font-size: 0.82rem;
+  color: $ink-500;
+  margin: 0.9rem 0 0 0;
+}
+
+// Floating WhatsApp Widget
+.wa-float {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 950;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.75rem;
+}
+
+.wa-trigger {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.65rem 1.15rem 0.65rem 0.75rem;
+  background-color: #16A34A;
+  color: $surface-white;
+  border: 0;
+  border-radius: 999px;
+  font-family: $font-display;
+  font-size: 0.92rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 28px rgba(22, 163, 74, 0.38);
+  transition: transform $transition-base, background-color $transition-base;
+
+  &:hover {
+    background-color: #15803D;
+    color: $surface-white;
+    transform: translateY(-2px);
+  }
+}
+
+.wa-icon svg {
+  width: 28px;
+  height: 28px;
+}
+
+.wa-popover {
+  width: 300px;
+  max-width: calc(100vw - 2.5rem);
+  background-color: $surface-white;
+  border: 1px solid $border-light;
+  border-radius: $radius-lg;
+  box-shadow: $shadow-lg;
+  padding: 1.1rem;
+}
+
+.wa-popover-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.4rem;
+
+  strong {
+    font-family: $font-display;
+    font-size: 0.96rem;
+    color: $navy-900;
+  }
+}
+
+.wa-popover-close {
+  background: transparent;
+  border: 0;
+  font-size: 1.35rem;
+  line-height: 1;
+  color: $ink-500;
+  cursor: pointer;
+  padding: 0.1rem 0.35rem;
+
+  &:hover {
+    color: $ink-900;
+  }
+}
+
+.wa-popover-sub {
+  font-size: 0.84rem;
+  color: $ink-500;
+  margin-bottom: 0.85rem;
+}
+
+.wa-popover-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.wa-option {
+  display: block;
+  padding: 0.75rem 0.9rem;
+  border: 1px solid $border-light;
+  border-radius: $radius-md;
+  background-color: $surface-alt;
+  transition: border-color $transition-base, background-color $transition-base;
+
+  &:hover {
+    border-color: $emerald-600;
+    background-color: $emerald-50;
+  }
+}
+
+.wa-option-title {
+  display: block;
+  font-family: $font-display;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: $navy-900;
+}
+
+.wa-option-desc {
+  display: block;
+  font-size: 0.8rem;
+  color: $ink-500;
+}
+
+// 404 Page
+.error-404-inner {
+  max-width: 680px;
+  text-align: center;
+  padding: 2rem 0;
+
+  .hero-cta-group {
+    justify-content: center;
+    margin-top: 1.75rem;
+  }
+}
+
+.error-404-lead {
+  font-size: 1.08rem;
+  color: $ink-500;
+}

@@ -1,0 +1,58 @@
+{% assign wa_num = site.data.company.whatsapp_number %}
+{% assign wa_msg_bio = "Hola Dolsite, deseo cotizar un sistema biométrico de control de asistencia para mi empresa." | url_encode %}
+{% assign wa_msg_soft = "Hola Dolsite, necesito asesoría para desarrollo de software a la medida para mi negocio." | url_encode %}
+{% assign wa_msg_gen = "Hola Dolsite, quisiera recibir información sobre sus soluciones biométricas y de software." | url_encode %}
+
+<div class="wa-float" id="wa-float">
+  <div class="wa-popover" id="wa-popover" hidden aria-label="Opciones rápidas de WhatsApp">
+    <div class="wa-popover-header">
+      <strong>Asesoría directa por WhatsApp</strong>
+      <button type="button" class="wa-popover-close" id="wa-popover-close" aria-label="Cerrar menú de WhatsApp">&times;</button>
+    </div>
+    <p class="wa-popover-sub">Selecciona tu necesidad para iniciar con un asesor en Ecuador:</p>
+    <div class="wa-popover-actions">
+      <a
+        href="https://wa.me/{{ wa_num }}?text={{ wa_msg_bio }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="wa-option"
+      >
+        <span class="wa-option-title">Cotizar Sistema Biométrico</span>
+        <span class="wa-option-desc">Equipos ZKTeco, instalación y BioTime</span>
+      </a>
+      <a
+        href="https://wa.me/{{ wa_num }}?text={{ wa_msg_soft }}"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="wa-option"
+      >
+        <span class="wa-option-title">Consultar Software a la Medida</span>
+        <span class="wa-option-desc">ERP, facturación SRI y automatización</span>
+      </a>
+    </div>
+  </div>
+
+  <button
+    type="button"
+    class="wa-trigger"
+    id="wa-trigger"
+    aria-expanded="false"
+    aria-controls="wa-popover"
+    aria-label="Contactar a Dolsite por WhatsApp"
+  >
+    <span class="wa-icon" aria-hidden="true">{% include logo2.html %}</span>
+    <span class="wa-label">WhatsApp</span>
+  </button>
+  <noscript>
+    <a
+      href="https://wa.me/{{ wa_num }}?text={{ wa_msg_gen }}"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="wa-trigger"
+      aria-label="Contactar a Dolsite por WhatsApp"
+    >
+      <span class="wa-icon" aria-hidden="true">{% include logo2.html %}</span>
+      <span class="wa-label">WhatsApp</span>
+    </a>
+  </noscript>
+</div>

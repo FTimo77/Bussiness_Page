@@ -1,0 +1,186 @@
+{% assign form_id = include.form_id | default: "dolsite-quote-form" %}
+{% assign default_service = include.default_service | default: "Sistema Biométrico de Asistencia" %}
+
+<form
+  id="{{ form_id }}"
+  class="quote-form js-protected-form"
+  action="{{ site.newsletter_action }}"
+  method="post"
+  target="_blank"
+  novalidate
+  data-whatsapp="{{ site.data.company.whatsapp_number }}"
+>
+  <!-- Capa 1 anti-bot: campos honeypot ocultos para usuarios reales -->
+  <div class="hp-field" aria-hidden="true">
+    <label for="{{ form_id }}-hp-mc">No completar este campo</label>
+    <input
+      type="text"
+      id="{{ form_id }}-hp-mc"
+      name="b_6db4ac2c575d1906e264a030b_a47d2caa18"
+      tabindex="-1"
+      value=""
+      autocomplete="off"
+    />
+    <label for="{{ form_id }}-hp-web">Sitio web</label>
+    <input
+      type="text"
+      id="{{ form_id }}-hp-web"
+      name="website_url"
+      class="js-honeypot"
+      tabindex="-1"
+      value=""
+      autocomplete="off"
+    />
+  </div>
+
+  <!-- Capa 2 anti-bot: marca de tiempo de carga -->
+  <input type="hidden" name="form_loaded_at" class="js-form-timestamp" value="" />
+
+  <div class="form-grid">
+    <div class="form-group">
+      <label for="{{ form_id }}-name">Nombre y apellido <span class="req">*</span></label>
+      <input
+        type="text"
+        id="{{ form_id }}-name"
+        name="FNAME"
+        placeholder="Ej. Ing. Carlos Paredes"
+        required
+        autocomplete="name"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form_id }}-company">Empresa / Organización</label>
+      <input
+        type="text"
+        id="{{ form_id }}-company"
+        name="COMPANY"
+        placeholder="Ej. Distribuidora Andina S.A."
+        autocomplete="organization"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form_id }}-email">Correo electrónico corporativo <span class="req">*</span></label>
+      <input
+        type="email"
+        id="{{ form_id }}-email"
+        name="EMAIL"
+        placeholder="nombre@tuempresa.com"
+        required
+        autocomplete="email"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form_id }}-phone">Teléfono / WhatsApp <span class="req">*</span></label>
+      <input
+        type="tel"
+        id="{{ form_id }}-phone"
+        name="PHONE"
+        placeholder="Ej. 099 123 4567"
+        required
+        autocomplete="tel"
+      />
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form_id }}-service">Solución de interés <span class="req">*</span></label>
+      <select id="{{ form_id }}-service" name="SERVICE" required>
+        <option value="Sistema Biométrico de Asistencia" {% if default_service == "Sistema Biométrico de Asistencia" %}selected{% endif %}>
+          Sistema Biométrico de Asistencia (ZKTeco / BioTime)
+        </option>
+        <option value="Desarrollo de Software a la Medida" {% if default_service == "Desarrollo de Software a la Medida" %}selected{% endif %}>
+          Desarrollo de Software a la Medida (ERP / Facturación / Web)
+        </option>
+        <option value="Integración Biométrico + Software Empresarial" {% if default_service == "Integración Biométrico + Software Empresarial" %}selected{% endif %}>
+          Integración Biométrico + Software Empresarial
+        </option>
+        <option value="Soporte Técnico o Diagnóstico" {% if default_service == "Soporte Técnico o Diagnóstico" %}selected{% endif %}>
+          Soporte técnico o diagnóstico de equipos
+        </option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="{{ form_id }}-city">Ciudad en Ecuador</label>
+      <input
+        type="text"
+        id="{{ form_id }}-city"
+        name="CITY"
+        placeholder="Ej. Ambato, Quito, Guayaquil..."
+        value="Ambato"
+      />
+    </div>
+  </div>
+
+  <div class="form-group form-group-full">
+    <label for="{{ form_id }}-message">Cuéntanos brevemente tu necesidad (cantidad de empleados o procesos)</label>
+    <textarea
+      id="{{ form_id }}-message"
+      name="MESSAGE"
+      rows="3"
+      placeholder="Ej. Tenemos 35 colaboradores en 2 turnos y necesitamos reportes de horas extras listos para nómina..."
+    ></textarea>
+  </div>
+
+  <!-- Capa 3 anti-bot: verificación humana interactiva antes del envío -->
+  <div class="bot-check-box" role="region" aria-label="Verificación de seguridad anti-bots">
+    <div class="bot-check-header">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M12 1 3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-1 15-4-4 1.41-1.41L11 13.17l5.59-5.59L18 9l-7 7z"/>
+      </svg>
+      <span>Verificación de seguridad (anti-bots)</span>
+    </div>
+
+    <div class="bot-check-controls">
+      <label for="{{ form_id }}-captcha" class="bot-question">
+        Resuelve para habilitar el envío: <strong class="js-captcha-prompt">¿Cuánto es 4 + 3?</strong>
+      </label>
+      <div class="bot-input-row">
+        <input
+          type="text"
+          inputmode="numeric"
+          pattern="[0-9]*"
+          id="{{ form_id }}-captcha"
+          class="bot-input js-captcha-answer"
+          placeholder="Respuesta"
+          autocomplete="off"
+          required
+          aria-describedby="{{ form_id }}-bot-status"
+        />
+        <button
+          type="button"
+          class="bot-refresh js-captcha-refresh"
+          aria-label="Generar una nueva operación de verificación"
+          title="Cambiar operación"
+        >
+          &#8635; Nueva
+        </button>
+      </div>
+    </div>
+
+    {% if site.turnstile_sitekey and site.turnstile_sitekey != "" %}
+    <div class="cf-turnstile" data-sitekey="{{ site.turnstile_sitekey }}" data-language="es"></div>
+    {% endif %}
+
+    <p class="bot-status js-bot-status" id="{{ form_id }}-bot-status" aria-live="polite">
+      Completa la operación matemática para confirmar que eres una persona real.
+    </p>
+  </div>
+
+  <div class="form-feedback js-form-feedback" role="alert" aria-live="polite" hidden></div>
+
+  <div class="form-actions">
+    <button type="submit" class="btn btn-primary btn-lg js-submit-btn">
+      Enviar solicitud por correo
+    </button>
+    <button type="button" class="btn btn-outline-emerald btn-lg js-whatsapp-submit">
+      Enviar estos datos por WhatsApp
+    </button>
+  </div>
+
+  <p class="form-privacy-note">
+    Tus datos se usan exclusivamente para preparar tu cotización técnica. Sin spam ni envíos automatizados.
+  </p>
+</form>

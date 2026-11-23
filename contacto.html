@@ -1,0 +1,83 @@
+---
+layout: default
+title: Contacto y Cotizaciones
+breadcrumb_title: Contacto
+seo_title: Contacto y Cotizaciones en Ambato y Ecuador | Dolsite
+description: Cotiza sistemas biométricos de asistencia ZKTeco o desarrollo de software empresarial a la medida con Dolsite en Ambato y todo Ecuador.
+og_image: /images/biometrico.webp
+permalink: /contacto/
+---
+{% assign wa_num = site.data.company.whatsapp_number %}
+{% assign wa_bio = "Hola Dolsite, deseo cotizar un sistema biométrico de asistencia." | url_encode %}
+{% assign wa_soft = "Hola Dolsite, necesito una reunión para software a la medida." | url_encode %}
+
+<section class="page-hero" aria-labelledby="contact-page-h1">
+  <div class="container">
+    <nav class="breadcrumb" aria-label="Ruta de navegación">
+      <a href="{{ site.baseurl }}/">Inicio</a>
+      <span aria-hidden="true">/</span>
+      <span aria-current="page">Contacto</span>
+    </nav>
+    <p class="eyebrow eyebrow-light">Atención empresarial en Ambato y todo Ecuador</p>
+    <h1 id="contact-page-h1" class="editable">
+      Cotiza tu Sistema Biométrico o Proyecto de Software a la Medida
+    </h1>
+    <p class="lead editable">
+      Te asesoramos sin compromiso para elegir el reloj biométrico adecuado o planificar la digitalización de tu empresa.
+    </p>
+  </div>
+</section>
+
+<section class="section" id="cotizar">
+  <div class="container split-layout">
+    <div>
+      <p class="eyebrow">Canales directos</p>
+      <h2 class="editable">Habla con nuestro equipo técnico en Ecuador</h2>
+      <p class="editable">
+        Realizamos visitas técnicas e instalación presencial en Ambato y Tungurahua, además de envíos asegurados y soporte remoto en todo el país.
+      </p>
+
+      <div style="display: flex; flex-direction: column; gap: 1rem; margin: 1.75rem 0;">
+        <div class="card">
+          <h3>Ubicación y Cobertura</h3>
+          <p><strong>Sede:</strong> {{ site.data.company.address }}</p>
+          <p><strong>Cobertura:</strong> {{ site.data.company.coverage }}</p>
+        </div>
+
+        <div class="card">
+          <h3>Teléfono, WhatsApp y Correo</h3>
+          <p><strong>Teléfono:</strong> <a href="tel:{{ site.data.company.phone_raw }}">{{ site.data.company.phone }}</a></p>
+          <p><strong>Correo:</strong> <a href="mailto:{{ site.data.company.email }}">{{ site.data.company.email }}</a></p>
+          <p><strong>Horario:</strong> {{ site.data.company.business_hours }}</p>
+        </div>
+      </div>
+
+      <div class="hero-cta-group">
+        <a
+          href="https://wa.me/{{ wa_num }}?text={{ wa_bio }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          WhatsApp: Cotizar Biométrico
+        </a>
+        <a
+          href="https://wa.me/{{ wa_num }}?text={{ wa_soft }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-outline"
+        >
+          WhatsApp: Software a Medida
+        </a>
+      </div>
+    </div>
+
+    <div class="quote-panel">
+      <h2 style="font-size: 1.45rem; margin-bottom: 0.45rem;">Formulario de cotización segura</h2>
+      <p style="font-size: 0.94rem; color: #64748B; margin-bottom: 1.35rem;">
+        Completa tus datos y supera la verificación anti-bots para recibir respuesta directa en tu correo o WhatsApp.
+      </p>
+      {% include contact-form.html form_id="contact-page-form" default_service="Sistema Biométrico de Asistencia" %}
+    </div>
+  </div>
+</section>

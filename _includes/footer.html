@@ -1,0 +1,124 @@
+<footer class="site-footer" id="site-footer">
+  <div class="container">
+    <p class="editor-link">
+      <a href="cloudcannon:collections/_data/company.yml" class="btn-editor">
+        <strong>&#9998;</strong> Actualizar datos de la empresa y footer
+      </a>
+    </p>
+
+    <div class="footer-grid">
+      <div class="footer-col footer-brand-col">
+        <a class="footer-brand" href="{{ site.baseurl }}/">
+          <img
+            src="{{ site.baseurl }}{{ site.logo }}"
+            alt="Logotipo de Dolsite"
+            width="44"
+            height="44"
+            loading="lazy"
+            class="footer-logo"
+          />
+          <span>
+            <strong class="footer-brand-name">{{ site.data.company.company_name }}</strong>
+            <span class="footer-brand-sub">Soluciones Informáticas y Biométricos</span>
+          </span>
+        </a>
+        <p class="footer-mission">{{ site.data.company.mission_statement }}</p>
+        <p class="footer-coverage">
+          <strong>Cobertura:</strong> {{ site.data.company.coverage }}
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Soluciones</h2>
+        <ul class="footer-links">
+          <li><a href="{{ site.baseurl }}/biometricos/">Relojes biométricos de asistencia</a></li>
+          <li><a href="{{ site.baseurl }}/biometricos/#catalogo-equipos">Catálogo ZKTeco y software BioTime</a></li>
+          <li><a href="{{ site.baseurl }}/biometricos/#paquetes-biometricos">Paquetes e instalación en sitio</a></li>
+          <li><a href="{{ site.baseurl }}/software-a-medida/">Desarrollo de software a la medida</a></li>
+          <li><a href="{{ site.baseurl }}/software-a-medida/#soluciones-software">Sistemas ERP y facturación electrónica SRI</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Recursos</h2>
+        <ul class="footer-links">
+          <li><a href="{{ site.baseurl }}/#como-funciona">Cómo funciona el control biométrico</a></li>
+          <li><a href="{{ site.baseurl }}/#proceso-software">Metodología de desarrollo a medida</a></li>
+          <li><a href="{{ site.baseurl }}/#garantias-soporte">Garantías y soporte técnico local</a></li>
+          <li><a href="{{ site.baseurl }}/#preguntas-frecuentes">Preguntas frecuentes</a></li>
+          <li><a href="{{ site.baseurl }}/contacto/#cotizar">Solicitar cotización o demo gratuita</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h2 class="footer-heading">Contacto Directo</h2>
+        <address class="footer-contact">
+          <p class="footer-contact-item">
+            <a
+              href="https://www.google.com/maps/search/?api=1&amp;query={{ site.data.company.address | url_encode }}"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {% include icons/footer.html icon="place" %}
+              <span>{{ site.data.company.address }}</span>
+            </a>
+          </p>
+          <p class="footer-contact-item">
+            <a href="tel:{{ site.data.company.phone_raw }}">
+              {% include icons/footer.html icon="phone" %}
+              <span>{{ site.data.company.phone }}</span>
+            </a>
+          </p>
+          <p class="footer-contact-item">
+            <a href="mailto:{{ site.data.company.email }}">
+              {% include icons/footer.html icon="email" %}
+              <span>{{ site.data.company.email }}</span>
+            </a>
+          </p>
+          <p class="footer-hours">{{ site.data.company.business_hours }}</p>
+        </address>
+
+        <div class="footer-social">
+          {% if site.data.company.facebook and site.data.company.facebook != "" %}
+          <a
+            href="https://www.facebook.com/{{ site.data.company.facebook }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Dolsite en Facebook"
+            class="social-btn"
+          >
+            {% include icons/social-media.html social_icon="facebook" %}
+          </a>
+          {% endif %}
+          {% if site.data.company.linkedin and site.data.company.linkedin != "" %}
+          <a
+            href="https://www.linkedin.com/{{ site.data.company.linkedin }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Dolsite en LinkedIn"
+            class="social-btn"
+          >
+            {% include icons/social-media.html social_icon="linkedin" %}
+          </a>
+          {% endif %}
+          {% if site.data.company.instagram and site.data.company.instagram != "" %}
+          <a
+            href="https://www.instagram.com/{{ site.data.company.instagram }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Dolsite en Instagram"
+            class="social-btn"
+          >
+            {% include icons/social-media.html social_icon="instagram" %}
+          </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {{ "now" | date: "%Y" }} {{ site.data.company.legal_name }}. Todos los derechos reservados.</p>
+      <p>Ambato, Tungurahua &middot; Atención empresarial en todo Ecuador.</p>
+    </div>
+  </div>
+</footer>

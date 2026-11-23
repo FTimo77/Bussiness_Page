@@ -1,226 +1,583 @@
 ---
 layout: default
-title: Biométricos
+title: Inicio
+seo_title: Relojes Biométricos de Asistencia y Software a la Medida en Ecuador | Dolsite
+description: Venta, instalación y soporte de relojes biométricos ZKTeco (facial y huella) con software BioTime y desarrollo de software empresarial a la medida en Ambato y Ecuador.
+og_image: /images/biometrico.webp
+og_image_alt: Reloj biométrico ZKTeco instalado por Dolsite en Ecuador
+include_faq_schema: true
 ---
+{% assign wa_num = site.data.company.whatsapp_number %}
+{% assign wa_bio = "Hola Dolsite, deseo cotizar un sistema biométrico de control de asistencia para mi empresa." | url_encode %}
+{% assign wa_soft = "Hola Dolsite, deseo consultar por desarrollo de software a la medida para mi negocio." | url_encode %}
+{% assign wa_pkg_esencial = "Hola Dolsite, me interesa el Paquete Esencial de biométrico ($125)." | url_encode %}
+{% assign wa_pkg_avanzado = "Hola Dolsite, me interesa el Paquete Avanzado de biométrico instalado ($150)." | url_encode %}
+{% assign wa_pkg_empresarial = "Hola Dolsite, me interesa el Paquete Empresarial de biométrico con capacitación ($175)." | url_encode %}
 
-<header>
-  <div class="container section-box">
-    <div class="column">
-      <div>
-        <h1 class="editable section-title">Biométricos</h1>
-        <p class="editable">Asistencia sin fraudes: fácil, rápido y seguro</p>
-        <p class="editable">¡Los mejores precios!</p>
-        <div class="button">
-          <a href="https://wa.link/1nx3cn">Cotiza tu Equipo</a>
-        </div>
+<!-- HERO SECTION -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow eyebrow-light editable">Soluciones empresariales en Ambato y todo Ecuador</p>
+      <h1 id="hero-heading" class="editable">
+        Control Biométrico de Asistencia y Software a la Medida para tu Empresa
+      </h1>
+      <p class="lead editable">
+        Elimina el fraude en marcaciones, reduce hasta en un 40% el tiempo de cierre de nómina y digitaliza tus procesos operativos con soporte técnico local garantizado.
+      </p>
+
+      <div class="hero-cta-group">
+        <a
+          href="https://wa.me/{{ wa_num }}?text={{ wa_bio }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary btn-lg"
+        >
+          Cotizar Sistema Biométrico
+        </a>
+        <a href="{{ site.baseurl }}/software-a-medida/" class="btn btn-secondary btn-lg">
+          Consultar Software a Medida
+        </a>
       </div>
-    </div>
-    <div class="column">
-      <img
-        src="{{ site.baseurl }}/images/biometrico.webp"
-        alt="Control biométrico ZKTeco MB20VL"
-        loading="lazy"
-      />
-    </div>
-  </div>
-</header>
 
-<div class="container section-box">
-  <h2 class="editablen section-title" style="text-align: center">Beneficios</h2>
-
-  <ul class="thirds" id="beneficios-list">
-    <li>
-      <div class="image">{% include icons/site.html icon="reports" %}</div>
-      <h3 class="editable">Reportes</h3>
-      <p class="editable">
-        Software incluido con reportes automáticos - Exporta a Excel.
-      </p>
-    </li>
-
-    <li>
-      <div class="image">{% include icons/site.html icon="clock" %}</div>
-      <h3 class="editable">Control de asistencia en tiempo real</h3>
-      <p class="editable">
-        Registros precisos de entradas y salidas, sin posibilidad de
-        suplantación.
-      </p>
-    </li>
-
-    <li>
-      <div class="image">{% include icons/site.html icon="savings" %}</div>
-      <h3 class="editable">Reducción de costos</h3>
-      <p class="editable">
-        Menos tiempo en gestiones manuales y menos pérdidas por fraudes o
-        retrasos.
-      </p>
-    </li>
-  </ul>
-</div>
-
-
-<div class="container section-box">
-  <h2 class="editable section-title" style="text-align: center">Cómo Funciona Nuestro Sistema Biométrico</h2>
-  <p class="subtitulo" style="text-align: center; margin-bottom: 24px;">Control de asistencia confiable, rápido y sin complicaciones.</p>
-  <div class="columns" style="display: flex; align-items: center; gap: 40px; flex-wrap: wrap;">
-    <div style="flex: 1 1 320px; min-width: 260px; max-width: 400px;">
-      <img
-        src="{{ site.baseurl }}/images/dedo.webp"
-        alt="Cómo funciona un biométrico"
-        loading="lazy"
-        class="device-img"
-        style="display: block; margin: 0 auto 24px auto; max-width: 100%; border-radius: 12px; box-shadow: 0 2px 12px rgba(0,0,0,0.10); background: #f5f7fa;"
-      />
-    </div>
-    <div style="flex: 2 1 400px; min-width: 280px;">
-      <ul style="list-style: none; padding: 0; margin: 0;">
-        <li class="step" style="margin-bottom: 28px; display: flex; justify-content: space-between;">
-          <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
-            <img src="{{ site.baseurl }}/images/register.svg" alt="Registro del personal" style="width: 50px; height: 50px;">
-            <h3 class="editable section-title" style="font-size: 1.2em; margin: 0;">Paso 1 Registro del Personal</h3>
-            <p class="editable" style="margin-top: 8px;">Registra a tus colaboradores en minutos.</p>
-          </div>
-          <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
-            <img src="{{ site.baseurl }}/images/fingerprint.svg" alt="Marcaje de asistencia" style="width: 50px; height: 50px;">
-            <h3 class="editable section-title" style="font-size: 1.2em; margin: 0;">Paso 2 Marcaje de Asistencia</h3>
-            <p class="editable" style="margin-top: 8px;">Los empleados registran su ingreso y salida mediante huella o reconocimiento facial.</p>
-          </div>
+      <ul class="hero-proof-list">
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <span>Instalación en sitio en Ambato y envíos a todo Ecuador</span>
         </li>
-        <li class="step" style="margin-bottom: 28px; display: flex; justify-content: space-between;">
-          <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
-            <img src="{{ site.baseurl }}/images/reports.svg" alt="Control y reportes" style="width: 50px; height: 50px;">
-            <h3 class="editable section-title" style="font-size: 1.2em; margin: 0;">Paso 3 Control y Reportes</h3>
-            <p class="editable" style="margin-top: 8px;">Genera reportes detallados de asistencia, retrasos y horas trabajadas.</p>
-          </div>
-          <div style="flex: 1; display: flex; flex-direction: column; align-items: center;">
-            <img src="{{ site.baseurl }}/images/remote.svg" alt="Gestión remota" style="width: 50px; height: 50px;">
-            <h3 class="editable section-title" style="font-size: 1.2em; margin: 0;">Paso 4 Gestión Remota</h3>
-            <p class="editable" style="margin-top: 8px;">Administra tu equipo desde cualquier lugar.</p>
-          </div>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <span>Equipos ZKTeco originales y software BioTime</span>
+        </li>
+        <li>
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M9 16.17 4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+          <span>Sistemas ERP y facturación electrónica SRI a medida</span>
         </li>
       </ul>
-      <div class="cta" style="margin-top: 24px; text-align: left; margin-left: 66px;">
-        <p class="editable">Simplifica el control de asistencia de tu empresa y elimina errores o fraudes.</p>
-        <div class="button">
-          <a href="#register">Solicita tu demo gratuita hoy</a>
+    </div>
+
+    <div class="hero-media">
+      <div class="hero-visual-frame">
+        <img
+          src="{{ site.baseurl }}/images/biometrico.webp"
+          alt="Reloj biométrico de control de asistencia ZKTeco con reconocimiento facial y huella digital en Ecuador"
+          width="992"
+          height="1056"
+          fetchpriority="high"
+        />
+        <div class="hero-caption-strip">
+          <span><strong>ZKTeco + BioTime</strong> · Facial y Huella</span>
+          <span>Reportes listos para nómina</span>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
 
+<!-- TRUST METRICS BAR -->
+<section class="trust-strip" aria-label="Indicadores de respaldo técnico">
+  <div class="container trust-strip-grid">
+    <div class="trust-metric">
+      <strong>-40% tiempo en nómina</strong>
+      <span>Reportes automáticos de atrasos y horas extras</span>
+    </div>
+    <div class="trust-metric">
+      <strong>Cero suplantación</strong>
+      <span>Reconocimiento facial anti-fraude y huella óptica</span>
+    </div>
+    <div class="trust-metric">
+      <strong>Soporte local real</strong>
+      <span>Instalación presencial en Ambato y soporte nacional</span>
+    </div>
+    <div class="trust-metric">
+      <strong>Software escalable</strong>
+      <span>ERP, facturación SRI e integración biométrica</span>
+    </div>
+  </div>
+</section>
 
-
+<!-- BIOMETRIC SOLUTIONS BENEFITS -->
+<section class="section" id="soluciones-biometricas" aria-labelledby="bio-heading">
   <div class="container">
-    <hr />
-    <blockquote>
-      <p class="quote editable">
-        “Desde que implementamos los biométricos de Dolsite, logramos un control
-        de asistencia más preciso y redujimos el tiempo de gestión en un 40%.
-        Ahora tenemos reportes claros y confiables en segundos.”
-      </p>
-      <div class="attribute">
-        <p class="meta">
-          <span class="image"
-            ><img
-              class="editable"
-              src="{{ site.baseurl }}/images/colecom.png"
-              alt="Colecom Constructora"
-          /></span>
-          <span class="author editable"><strong>Colecom Constructora</strong></span>
-        </p>
-      </div>
-    </blockquote>
-  </div>
-
-  <div class="container section-box">
-  <h2 class="editablen section-title" style="text-align: center">Paquetes</h2>
-
-  <ul class="thirds" id="beneficios-list">
-    <li>
-      <div class="image"><img
-              class="editable"
-              src="{{ site.baseurl }}/images/quality.png"
-              alt="Esencial"
-          /></div>
-      <h3 class="editable">Esencial</h3>
-      <h3 class="editable">$125</h3>
+    <div class="section-header">
+      <p class="eyebrow">Control de Asistencia y Acceso Biométrico</p>
+      <h2 id="bio-heading" class="editable">
+        Elimina errores de nómina y marcaciones fraudulentas desde el primer día
+      </h2>
       <p class="editable">
-        Recibe tu equipo y software al mejor precio. Ideal para quienes ya tienen experiencia en configuración.
+        Equipamos a PYMES, industrias, constructoras y oficinas en Ecuador con relojes biométricos confiables, listos para integrarse a tu flujo de Recursos Humanos.
       </p>
-    </li>
-
-    <li>
-      <div class="image"><img
-              class="editable"
-              src="{{ site.baseurl }}/images/silver-medal.png"
-              alt="Avanzado"
-          /></div>
-      <h3 class="editable">Avanzado</h3>
-      <h3 class="editable">$150</h3>
-      <p class="editable">
-        Te entregamos el equipo <strong>instalado y listo para usar</strong> desde el primer día.
-      </p>
-    </li>
-
-    <li>
-      <div class="image"><img
-              class="editable"
-              src="{{ site.baseurl }}/images/medal.png"
-              alt="Empresarial"
-          /></div>
-      <h3 class="editable">Empresarial</h3>
-      <h3 class="editable">$175</h3>
-      <p class="editable">
-        Incluye instalación completa, configuración personalizada y <strong>capacitación para tu equipo</strong>.
-      </p>
-    </li>
-  </ul>
-</div>
-
-  <div id= "register"class="darker">
-    <div class="container section-box">
-      <h2 class="editable section-title">Regístrate</h2>
-      <p class="editable" style="text-align: center">
-        Regístrate con tu correo electrónico y nos contactaremos contigo y obtendrás una visita completamente gratis.
-      </p>
-      <form action="{{ site.newsletter_action }}" method="post">
-        <input type="text" name="EMAIL" placeholder="Email" />
-        <input type="submit" value="Regístrate" />
-      </form>
     </div>
-  </div>
 
-  <div class="darker">
-    <div class="container section-box">
-      <h2 class="editable section-title">Modelos</h2>
-      <p class="editor-link">
-        <a href="cloudcannon:collections/_posts" class="btn"
-          ><strong>&#9998;</strong> Add Update</a
-        >
-      </p>
-      <div class="posts">
-        {% for post in site.posts %}
-        <div class="post">
-          <div
-            class="image"
-            style="background-image: url({{ post.featured_image}})"
-          ></div>
-          <div class="post-content">
-            <p>
-              {{ post.custom_date | default: post.date | date: '%B %d, %Y' }}
-            </p>
-            <h3>{{ post.title }}</h3>
-
-            {{ post.content }}
-            <p class="editor-link">
-              <a href="cloudcannon:collections/{{ post.path }}" class="btn"
-                ><strong>&#9998;</strong> Edit Update</a
-              >
-            </p>
-          </div>
+    <div class="grid-3">
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">
+          {% include icons/site.html icon="reports" %}
         </div>
-        {% endfor %}
+        <h3 class="editable">Reportes listos para nómina</h3>
+        <p class="editable">
+          Calcula automáticamente atrasos, faltas, permisos, horas suplementarias y extraordinarias. Exporta consolidados limpios a Excel y PDF en segundos.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">
+          {% include icons/site.html icon="clock" %}
+        </div>
+        <h3 class="editable">Cero suplantación de identidad</h3>
+        <p class="editable">
+          Terminales ZKTeco con reconocimiento facial anti-spoofing y huella digital de alta precisión. Garantiza que cada marcación corresponda al colaborador real.
+        </p>
+      </article>
+
+      <article class="card">
+        <div class="card-icon" aria-hidden="true">
+          {% include icons/site.html icon="savings" %}
+        </div>
+        <h3 class="editable">Control multi-sucursal y ahorro</h3>
+        <p class="editable">
+          Supervisa una o varias sedes en red local o en la nube con software BioTime. Reduce pérdidas por impuntualidad y horas de consolidación manual.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS (BIOMETRICS) -->
+<section class="section section-alt" id="como-funciona" aria-labelledby="workflow-heading">
+  <div class="container split-layout">
+    <div class="media-showcase">
+      <img
+        src="{{ site.baseurl }}/images/dedo.webp"
+        alt="Colaborador registrando su asistencia diaria en un terminal biométrico ZKTeco instalado en oficina"
+        width="1024"
+        height="1024"
+        loading="lazy"
+      />
+    </div>
+
+    <div>
+      <p class="eyebrow">Implementación sin fricción</p>
+      <h2 id="workflow-heading" class="editable">
+        Cómo funciona nuestro sistema de control de asistencia biométrico
+      </h2>
+      <p class="editable">
+        En menos de un día tu empresa pasa de hojas manuales o planillas inconsistentes a un registro automatizado y auditable.
+      </p>
+
+      <div class="workflow-steps">
+        <div class="workflow-step-card">
+          <div class="step-head">
+            <img
+              src="{{ site.baseurl }}/images/register.svg"
+              alt="Icono de registro de colaboradores"
+              width="36"
+              height="36"
+              loading="lazy"
+              class="step-icon"
+            />
+            <h3 class="editable">1. Registro del personal</h3>
+          </div>
+          <p class="editable">Enrolamos a tus colaboradores por rostro, huella o tarjeta RFID y definimos horarios y turnos.</p>
+        </div>
+
+        <div class="workflow-step-card">
+          <div class="step-head">
+            <img
+              src="{{ site.baseurl }}/images/fingerprint.svg"
+              alt="Icono de marcaje biométrico diario"
+              width="36"
+              height="36"
+              loading="lazy"
+              class="step-icon"
+            />
+            <h3 class="editable">2. Marcaje en menos de 1 segundo</h3>
+          </div>
+          <p class="editable">Tus empleados registran entradas, salidas y almuerzos sin filas ni contacto físico.</p>
+        </div>
+
+        <div class="workflow-step-card">
+          <div class="step-head">
+            <img
+              src="{{ site.baseurl }}/images/reports.svg"
+              alt="Icono de reportes automáticos de nómina"
+              width="36"
+              height="36"
+              loading="lazy"
+              class="step-icon"
+            />
+            <h3 class="editable">3. Reportes automáticos</h3>
+          </div>
+          <p class="editable">Genera reportes de atrasos, ausencias y horas extras listos para tu rol de pagos mensual.</p>
+        </div>
+
+        <div class="workflow-step-card">
+          <div class="step-head">
+            <img
+              src="{{ site.baseurl }}/images/remote.svg"
+              alt="Icono de supervisión remota"
+              width="36"
+              height="36"
+              loading="lazy"
+              class="step-icon"
+            />
+            <h3 class="editable">4. Gestión local o remota</h3>
+          </div>
+          <p class="editable">Consulta asistencias en tiempo real desde gerencia o Recursos Humanos, incluso entre sucursales.</p>
+        </div>
+      </div>
+
+      <div class="hero-cta-group" style="margin-top: 1.75rem;">
+        <a href="{{ site.baseurl }}/biometricos/" class="btn btn-primary">
+          Explorar soluciones biométricas completas
+        </a>
+        <a href="#cotizar" class="btn btn-secondary">
+          Solicitar demostración gratuita
+        </a>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<!-- BIOMETRIC PACKAGES -->
+<section class="section" id="paquetes" aria-labelledby="packages-heading">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Paquetes transparentes</p>
+      <h2 id="packages-heading" class="editable">
+        Planes de implementación biométrica para tu empresa
+      </h2>
+      <p class="editable">
+        Elige el nivel de acompañamiento ideal según tu equipo técnico. Todos los paquetes incluyen equipo original y garantía local.
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <article class="pricing-card">
+        <h3 class="pricing-tier editable">Esencial</h3>
+        <div class="pricing-price editable">$125 <span>USD</span></div>
+        <p class="pricing-desc editable">
+          Ideal si ya cuentas con personal de sistemas y buscas el mejor precio en equipo y software.
+        </p>
+        <ul class="check-list">
+          <li>Equipo biométrico ZKTeco original</li>
+          <li>Software de gestión de asistencia incluido</li>
+          <li>Garantía técnica local y factura comercial</li>
+          <li>Guía rápida de instalación inicial</li>
+        </ul>
+        <a
+          href="https://wa.me/{{ wa_num }}?text={{ wa_pkg_esencial }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+        >
+          Cotizar Plan Esencial
+        </a>
+      </article>
+
+      <article class="pricing-card is-featured">
+        <span class="pricing-badge">Más solicitado</span>
+        <h3 class="pricing-tier editable">Avanzado</h3>
+        <div class="pricing-price editable">$150 <span>USD</span></div>
+        <p class="pricing-desc editable">
+          Te entregamos el equipo instalado, conectado a tu red y listo para operar desde el primer día.
+        </p>
+        <ul class="check-list">
+          <li>Todo lo incluido en el Plan Esencial</li>
+          <li>Instalación física y configuración de red</li>
+          <li>Configuración de turnos, atrasos y reportes</li>
+          <li>Pruebas de marcación y exportación a Excel</li>
+        </ul>
+        <a
+          href="https://wa.me/{{ wa_num }}?text={{ wa_pkg_avanzado }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-primary"
+        >
+          Cotizar Plan Avanzado
+        </a>
+      </article>
+
+      <article class="pricing-card">
+        <h3 class="pricing-tier editable">Empresarial</h3>
+        <div class="pricing-price editable">$175 <span>USD</span></div>
+        <p class="pricing-desc editable">
+          Implementación llave en mano con configuración personalizada de horarios y capacitación a RRHH.
+        </p>
+        <ul class="check-list">
+          <li>Instalación completa y puesta en marcha</li>
+          <li>Configuración avanzada de turnos rotativos</li>
+          <li>Capacitación presencial o virtual a tu equipo</li>
+          <li>Soporte técnico prioritario post-instalación</li>
+        </ul>
+        <a
+          href="https://wa.me/{{ wa_num }}?text={{ wa_pkg_empresarial }}"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-secondary"
+        >
+          Cotizar Plan Empresarial
+        </a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DYNAMIC CATALOG FROM _POSTS (CLOUDCANNON EDITABLE) -->
+<section class="section section-alt" id="catalogo-modelos" aria-labelledby="catalog-heading">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Catálogo destacado</p>
+      <h2 id="catalog-heading" class="editable">
+        Equipos ZKTeco y software BioTime disponibles en Ecuador
+      </h2>
+      <p class="editable">
+        Hardware empresarial de alto desempeño respaldado con instalación y soporte técnico directo.
+      </p>
+    </div>
+
+    <p class="editor-link">
+      <a href="cloudcannon:collections/_posts" class="btn-editor">
+        <strong>&#9998;</strong> Agregar nuevo equipo o software al catálogo
+      </a>
+    </p>
+
+    <div class="catalog-grid">
+      {% for post in site.posts %}
+      <article class="product-card">
+        <div class="product-card-media">
+          <img
+            src="{{ post.featured_image }}"
+            alt="{{ post.image_alt | default: post.title | escape }}"
+            width="400"
+            height="300"
+            loading="lazy"
+          />
+        </div>
+        <div class="product-card-body">
+          {% if post.custom_date %}
+          <p class="product-card-price">{{ post.custom_date }}</p>
+          {% endif %}
+          <h3>
+            <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+          </h3>
+          <div class="product-card-excerpt">
+            {{ post.excerpt }}
+          </div>
+          <div class="product-card-actions">
+            <a href="{{ site.baseurl }}{{ post.url }}" class="text-link">
+              Especificaciones de {{ post.title }}
+            </a>
+          </div>
+          <p class="editor-link" style="margin-top: 0.75rem;">
+            <a href="cloudcannon:collections/{{ post.path }}" class="btn-editor">
+              <strong>&#9998;</strong> Editar equipo
+            </a>
+          </p>
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- CUSTOM SOFTWARE DEVELOPMENT BLOCK -->
+<section class="section section-dark" id="software-a-medida" aria-labelledby="software-heading">
+  <div class="container">
+    <div class="split-layout split-layout-reverse">
+      <div>
+        <p class="eyebrow eyebrow-light">Desarrollo de Software a la Medida en Ecuador</p>
+        <h2 id="software-heading" class="editable">
+          Software diseñado para la operación real de tu negocio, no al revés
+        </h2>
+        <p class="lead editable">
+          Cuando las hojas de cálculo se quedan cortas y los sistemas genéricos no se ajustan a tus reglas comerciales, construimos plataformas empresariales robustas, seguras y escalables.
+        </p>
+
+        <ul class="check-list">
+          <li><strong>Sistemas ERP modulares:</strong> compras, ventas, inventarios multi-bodega, cartera y rentabilidad en tiempo real.</li>
+          <li><strong>Facturación electrónica SRI:</strong> emisión, firma digital, retenciones, guías de remisión y reportes tributarios automatizados.</li>
+          <li><strong>Automatización e integración biométrica:</strong> conectamos tus relojes ZKTeco directamente con tu sistema de nómina o ERP.</li>
+          <li><strong>Aplicaciones web y portales B2B:</strong> acceso seguro para gerencia, vendedores en ruta y sucursales.</li>
+        </ul>
+
+        <div class="tech-tags" aria-label="Capacidades tecnológicas">
+          <span class="tech-tag">Aplicaciones Web &amp; API</span>
+          <span class="tech-tag">Facturación Electrónica SRI</span>
+          <span class="tech-tag">SQL &amp; Nube Segura</span>
+          <span class="tech-tag">Integración ZKTeco / BioTime</span>
+          <span class="tech-tag">Dashboards Gerenciales</span>
+        </div>
+
+        <div class="hero-cta-group" style="margin-top: 1.75rem;">
+          <a
+            href="https://wa.me/{{ wa_num }}?text={{ wa_soft }}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-primary btn-lg"
+          >
+            Agendar diagnóstico de software
+          </a>
+          <a href="{{ site.baseurl }}/software-a-medida/" class="btn btn-secondary btn-lg">
+            Ver alcance y casos de uso
+          </a>
+        </div>
+      </div>
+
+      <div class="media-showcase" style="background: #0B1F3A; border-color: #1E3A5F;">
+        <img
+          src="{{ site.baseurl }}/images/software-arquitectura.svg"
+          alt="Arquitectura de software empresarial a la medida de Dolsite con ERP, facturación SRI e integración biométrica"
+          width="640"
+          height="460"
+          loading="lazy"
+        />
+      </div>
+    </div>
+
+    <!-- 4-PHASE SOFTWARE METHODOLOGY -->
+    <div id="proceso-software" style="margin-top: 4rem;">
+      <div class="section-header section-header-left" style="margin-bottom: 2rem;">
+        <p class="eyebrow eyebrow-light">Metodología transparente</p>
+        <h3 style="font-size: 1.55rem; color: #FFFFFF;">Nuestro proceso en 4 etapas claras</h3>
+      </div>
+
+      <div class="grid-4">
+        <article class="card-dark">
+          <span class="step-number">01</span>
+          <h3 class="editable">Levantamiento</h3>
+          <p class="editable">Auditamos tus flujos reales, cuellos de botella y objetivos para definir alcance, cronograma y presupuesto cerrados.</p>
+        </article>
+
+        <article class="card-dark">
+          <span class="step-number">02</span>
+          <h3 class="editable">Desarrollo</h3>
+          <p class="editable">Construimos el sistema en entregas iterativas validables para que veas avances reales cada semana sin sorpresas.</p>
+        </article>
+
+        <article class="card-dark">
+          <span class="step-number">03</span>
+          <h3 class="editable">Implementación</h3>
+          <p class="editable">Desplegamos en nube o servidor local, migramos tus datos históricos y capacitamos a cada área usuaria.</p>
+        </article>
+
+        <article class="card-dark">
+          <span class="step-number">04</span>
+          <h3 class="editable">Soporte</h3>
+          <p class="editable">Brindamos acompañamiento continuo, respaldos automatizados y mejoras evolutivas conforme crece tu empresa.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOCIAL PROOF & LOCAL GUARANTEES -->
+<section class="section" id="garantias-soporte" aria-labelledby="trust-heading">
+  <div class="container">
+    <div class="section-header">
+      <p class="eyebrow">Respaldo comprobado en Ecuador</p>
+      <h2 id="trust-heading" class="editable">
+        Tecnología empresarial con soporte técnico local que sí responde
+      </h2>
+    </div>
+
+    <div class="testimonial-box" style="margin-bottom: 2.5rem;">
+      <blockquote class="testimonial-quote">
+        <p class="editable">
+          “Desde que implementamos los biométricos de Dolsite, logramos un control de asistencia más preciso y redujimos el tiempo de gestión en un 40%. Ahora tenemos reportes claros y confiables en segundos.”
+        </p>
+        <footer class="testimonial-author">
+          <img
+            src="{{ site.baseurl }}/images/colecom.png"
+            alt="Logotipo de Colecom Constructora, cliente de Dolsite"
+            width="512"
+            height="582"
+            loading="lazy"
+          />
+          <div>
+            <strong class="editable">Colecom Constructora</strong>
+            <span class="editable">Cliente corporativo · Control de Asistencia Biométrico</span>
+          </div>
+        </footer>
+      </blockquote>
+
+      <div class="testimonial-kpi">
+        <span class="kpi-value">-40%</span>
+        <span class="kpi-label">Reducción en tiempo administrativo de control horario y preparación de nómina</span>
+      </div>
+    </div>
+
+    <div class="grid-3">
+      <article class="card">
+        <h3 class="editable">Instalación y visitas técnicas en sitio</h3>
+        <p class="editable">
+          Atención presencial directa en Ambato y Tungurahua. Evaluamos tu red, puntos de energía y flujo de personal para garantizar una instalación limpia.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3 class="editable">Garantía real de hardware y software</h3>
+        <p class="editable">
+          Trabajamos con equipos originales ZKTeco con garantía local y código fuente documentado en nuestros desarrollos a la medida.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3 class="editable">Soporte técnico directo sin intermediarios</h3>
+        <p class="editable">
+          Hablas directamente con técnicos e ingenieros en Ecuador por WhatsApp, soporte remoto o visita técnica para resolver cualquier consulta rápido.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ SECTION (SYNCED WITH _data/faq.yml & JSON-LD) -->
+<section class="section section-alt" id="preguntas-frecuentes" aria-labelledby="faq-heading">
+  <div class="container container-narrow">
+    <div class="section-header">
+      <p class="eyebrow">Resolvemos tus dudas antes de invertir</p>
+      <h2 id="faq-heading" class="editable">Preguntas frecuentes sobre biométricos y software</h2>
+      <p class="editable">
+        Respuestas claras sobre licencias, cobertura en Ecuador, conectividad sin internet y proceso de desarrollo.
+      </p>
+    </div>
+
+    <p class="editor-link">
+      <a href="cloudcannon:collections/_data/faq.yml" class="btn-editor">
+        <strong>&#9998;</strong> Editar preguntas frecuentes
+      </a>
+    </p>
+
+    <div class="faq-list">
+      {% for item in site.data.faq %}
+      <details class="faq-item" {% if forloop.first %}open{% endif %}>
+        <summary class="faq-question">{{ item.question }}</summary>
+        <div class="faq-answer">
+          <p>{{ item.answer }}</p>
+        </div>
+      </details>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- QUICK QUOTE / CONTACT FORM WITH BOT PROTECTION -->
+<section class="section" id="cotizar" aria-labelledby="quote-heading">
+  <div id="register"></div>
+  <div class="container container-narrow">
+    <div class="section-header">
+      <p class="eyebrow">Asesoría técnica sin compromiso</p>
+      <h2 id="quote-heading" class="editable">
+        Solicita tu cotización o visita técnica gratuita
+      </h2>
+      <p class="editable">
+        Cuéntanos cuántos colaboradores tienes o qué proceso deseas automatizar. Te responderemos con una propuesta clara y sin costos ocultos.
+      </p>
+    </div>
+
+    <div class="quote-panel">
+      {% include contact-form.html form_id="home-quote-form" default_service="Sistema Biométrico de Asistencia" %}
+    </div>
+  </div>
+</section>

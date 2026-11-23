@@ -1,10 +1,86 @@
 ---
 layout: default
 ---
-<section>
-	<div class="container">
-		<h2>{{ page.title }}</h2>
-		
-		{{ content }}
-	</div>
-</section>
+{% assign wa_num = site.data.company.whatsapp_number %}
+{% assign wa_product_msg = "Hola Dolsite, deseo cotizar el modelo " | append: page.title | append: " con instalación y software de asistencia." | url_encode %}
+
+<article class="product-detail-page">
+  <section class="page-hero page-hero-compact">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Ruta de navegación">
+        <a href="{{ site.baseurl }}/">Inicio</a>
+        <span aria-hidden="true">/</span>
+        <a href="{{ site.baseurl }}/biometricos/">Biométricos</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{{ page.title }}</span>
+      </nav>
+      <div class="product-detail-grid">
+        <div class="product-detail-media">
+          {% if page.featured_image %}
+          <img
+            src="{{ page.featured_image }}"
+            alt="{{ page.image_alt | default: page.title | escape }}"
+            width="640"
+            height="480"
+            class="product-detail-img"
+          />
+          {% endif %}
+        </div>
+        <div class="product-detail-summary">
+          {% if page.category_label %}
+          <p class="eyebrow">{{ page.category_label }}</p>
+          {% endif %}
+          <h1>{{ page.title }}</h1>
+          {% if page.custom_date %}
+          <p class="product-price-tag">{{ page.custom_date }}</p>
+          {% endif %}
+          <div class="product-detail-body">
+            {{ content }}
+          </div>
+          {% if page.specs %}
+          <ul class="check-list">
+            {% for spec in page.specs %}
+            <li>{{ spec }}</li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+          <div class="hero-cta-group">
+            <a
+              href="https://wa.me/{{ wa_num }}?text={{ wa_product_msg }}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary btn-lg"
+            >
+              Cotizar {{ page.title }} por WhatsApp
+            </a>
+            <a href="{{ site.baseurl }}/contacto/#cotizar" class="btn btn-secondary btn-lg">
+              Solicitar proforma por correo
+            </a>
+          </div>
+          <p class="editor-link">
+            <a href="cloudcannon:collections/{{ page.path }}" class="btn-editor">
+              <strong>&#9998;</strong> Editar este modelo en CloudCannon
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-header">
+        <h2>Otras soluciones de control de asistencia y software</h2>
+        <p>Explora el catálogo completo de relojes biométricos ZKTeco o consulta nuestro desarrollo de software empresarial.</p>
+      </div>
+      <div class="internal-links-row">
+        <a href="{{ site.baseurl }}/biometricos/" class="btn btn-outline">
+          Ver catálogo completo de relojes biométricos
+        </a>
+        <a href="{{ site.baseurl }}/software-a-medida/" class="btn btn-outline">
+          Conocer desarrollo de software a la medida
+        </a>
+      </div>
+    </div>
+  </section>
+</article>

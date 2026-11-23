@@ -1,8 +1,17 @@
-company_name: Dolsite Tech
-mission_statement: Proveer soluciones en Software y Biométricos
-address: Atahualpa, Ambato, Ecuador
-phone: +593 0993920505
-email: 2005maldonado@gmail.com
-facebook: profile.php?id=61581708354224
-twitter: CloudCannon
-youtube: CloudCannon
+company_name: "Dolsite"
+legal_name: "Dolsite Tech — Soluciones Informáticas y Biométricos"
+tagline: "Control biométrico de asistencia y desarrollo de software empresarial a la medida."
+mission_statement: "Impulsamos la productividad de PYMES y empresas en Ambato y todo Ecuador con sistemas biométricos sin fraudes y software a la medida adaptado a tu operación real."
+address: "Atahualpa, Ambato, Tungurahua, Ecuador"
+city: "Ambato"
+region: "Tungurahua"
+country: "EC"
+coverage: "Ambato, Tungurahua y envíos/instalación en todo Ecuador"
+phone: "+593 99 392 0505"
+phone_raw: "+593993920505"
+whatsapp_number: "593993920505"
+email: "2005maldonado@gmail.com"
+business_hours: "Lunes a Viernes: 08:30 – 18:00 | Sábados: 09:00 – 13:00"
+facebook: "profile.php?id=61581708354224"
+linkedin: ""
+instagram: ""
