@@ -1,27 +1,35 @@
 - category: biometricos
   question: "¿Los relojes biométricos ZKTeco incluyen software de control de asistencia sin pagos mensuales?"
-  answer: "Sí. Entregamos equipos ZKTeco con software de gestión de asistencia (local o en la nube según tu necesidad) para calcular atrasos, horas extras, turnos rotativos y exportar reportes en Excel listos para nómina. En la modalidad local no pagas mensualidades recurrentes."
+  answer: "Sí. Todos nuestros relojes biométricos en Ecuador incluyen software de control de asistencia para gestionar horarios, turnos rotativos, atrasos y horas extras con exportación directa a Excel para nómina. En la modalidad de software local no pagas mensualidades ni licencias recurrentes; también ofrecemos BioTime en la nube para empresas multi-sucursal."
 
 - category: biometricos
-  question: "¿Realizan instalación en sitio en Ambato y envíos a otras ciudades de Ecuador?"
-  answer: "Sí. Contamos con instalación presencial, configuración de red y capacitación en sitio en Ambato y la provincia de Tungurahua. Para Quito, Guayaquil, Cuenca y el resto de Ecuador realizamos envíos asegurados con equipo preconfigurado y soporte remoto en vivo para la puesta en marcha."
+  question: "¿Realizan envíos e implementación de relojes biométricos en Quito, Guayaquil, Ambato, Cuenca y otras provincias?"
+  answer: "Sí. Realizamos instalación presencial en sitio en Ambato y la zona centro del país, y despachamos diariamente equipos biométricos preconfigurados a Quito, Guayaquil, Cuenca, Manta, Machala, Loja y las 24 provincias de Ecuador mediante transporte asegurado, incluyendo configuración remota y capacitación en vivo."
 
 - category: biometricos
-  question: "¿Qué sucede con las marcaciones si se va el internet o la luz en la empresa?"
-  answer: "Los terminales biométricos almacenan miles de registros en su memoria interna sin depender de internet. Cuando se restablece la conexión, los datos se sincronizan automáticamente con el software. Además, varios modelos admiten respaldo eléctrico (UPS o batería interna) para evitar interrupciones."
+  question: "¿Cómo funciona un reloj biométrico de huella y facial para evitar el fraude en marcaciones?"
+  answer: "Nuestros equipos combinan sensores ópticos de huella dactilar con cámaras de reconocimiento facial infrarrojo con algoritmo anti-spoofing, que impide suplantaciones con fotografías impresas o pantallas de celular. Así garantizas que solo el colaborador presencial registre su entrada, salida o tiempo de almuerzo."
 
 - category: biometricos
-  question: "¿Cómo evitan la suplantación de identidad o fraude en las marcaciones?"
-  answer: "Nuestros equipos combinan reconocimiento facial con tecnología anti-spoofing (detecta fotos o videos) y sensores ópticos de huella digital de alta precisión. Solo el colaborador presencial puede registrar su entrada o salida, eliminando el marcaje por terceros."
+  question: "¿Qué pasa con el registro de asistencia si se corta el internet o la energía eléctrica?"
+  answer: "El reloj biométrico guarda todas las marcaciones de huella y rostro en su memoria interna no volátil aunque no exista conexión a internet. Apenas se restablece la red, sincroniza los datos automáticamente con el software. Además, disponemos de modelos con batería de respaldo integrada (UPS) para seguir operando durante cortes eléctricos."
+
+- category: biometricos
+  question: "¿Qué garantía y soporte técnico tienen los equipos biométricos en Ecuador?"
+  answer: "Entregamos equipos ZKTeco originales con factura comercial ecuatoriana, garantía real de fábrica contra defectos de hardware y soporte técnico especializado directo con ingenieros en Ecuador por WhatsApp, conexión remota o visita técnica."
 
 - category: software
-  question: "¿Qué tipo de software a la medida desarrolla Dolsite para empresas en Ecuador?"
-  answer: "Desarrollamos sistemas web y empresariales adaptados a la operación real de cada negocio: ERP modulares, facturación electrónica integrada al SRI, gestión de inventarios y bodegas, automatización de nómina y reportes gerenciales en tiempo real, además de integraciones con equipos biométricos."
+  question: "¿Qué tipos de desarrollo de software a la medida y programas para empresas realizan en Ecuador?"
+  answer: "Desarrollamos programas empresariales adaptados al 100% a tu flujo operativo: sistemas ERP a medida (compras, inventario multi-bodega, ventas, cartera), facturación electrónica integrada al SRI, automatización de procesos internos, aplicaciones web B2B y conexión directa entre relojes biométricos y tu sistema de nómina."
 
 - category: software
-  question: "¿Cómo garantizan que el software a medida cumpla con los plazos y el presupuesto?"
-  answer: "Trabajamos en cuatro fases claras con entregas parciales validables: levantamiento de procesos, arquitectura y desarrollo iterativo, implementación con migración de datos y soporte técnico evolutivo. Antes de escribir código entregamos un alcance técnico, cronograma y presupuesto cerrados."
+  question: "¿Quién es dueño del código fuente y la base de datos en un desarrollo de software a la medida?"
+  answer: "Tu empresa conserva la titularidad y el control de su información y del sistema desarrollado según los términos del contrato. Entregamos software documentado, sin ataduras ocultas ni cobros por usuario adicional, desplegado en tu propio servidor local o en la nube de tu empresa."
+
+- category: software
+  question: "¿Cómo garantizan el cumplimiento de plazos, presupuesto y soporte técnico en proyectos de software?"
+  answer: "Trabajamos mediante 4 fases con entregables verificables: levantamiento técnico con presupuesto cerrado, desarrollo iterativo con revisiones semanales, implementación con migración de datos y capacitación, y soporte técnico local en Ecuador con garantía post-implementación."
 
 - category: general
-  question: "¿Qué garantía y soporte técnico ofrecen después de la implementación?"
-  answer: "Todos los equipos biométricos cuentan con garantía local de hardware y soporte técnico directo en Ecuador (presencial en Ambato y remoto a nivel nacional). En proyectos de software a la medida incluimos acompañamiento post-lanzamiento, capacitación al personal y planes de mantenimiento evolutivo."
+  question: "¿Cómo puedo solicitar una cotización o demostración para mi empresa en Ecuador?"
+  answer: "Puedes escribirnos directamente por WhatsApp al +593 99 392 0505 o completar el formulario de cotización en línea. Un ingeniero especialista evaluará la cantidad de colaboradores o los procesos que deseas automatizar y te enviará una propuesta formal en menos de 24 horas."

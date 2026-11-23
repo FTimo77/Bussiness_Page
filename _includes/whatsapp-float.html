@@ -1,15 +1,38 @@
 {% assign wa_num = site.data.company.whatsapp_number %}
-{% assign wa_msg_bio = "Hola Dolsite, deseo cotizar un sistema biométrico de control de asistencia para mi empresa." | url_encode %}
-{% assign wa_msg_soft = "Hola Dolsite, necesito asesoría para desarrollo de software a la medida para mi negocio." | url_encode %}
-{% assign wa_msg_gen = "Hola Dolsite, quisiera recibir información sobre sus soluciones biométricas y de software." | url_encode %}
+{% if page.whatsapp_message %}
+  {% assign wa_context_raw = page.whatsapp_message %}
+{% elsif page.layout == "post" %}
+  {% assign wa_context_raw = "Hola Dolsite, estoy viendo el modelo " | append: page.title | append: " y deseo cotizar este equipo biométrico para mi empresa en Ecuador." %}
+{% elsif page.url contains "relojes-biometricos" or page.url contains "biometricos" %}
+  {% assign wa_context_raw = "Hola Dolsite, estoy en su página de Relojes Biométricos en Ecuador y deseo cotizar un sistema de control de asistencia biométrico (huella y facial)." %}
+{% elsif page.url contains "desarrollo-software" or page.url contains "software-a-medida" %}
+  {% assign wa_context_raw = "Hola Dolsite, estoy en su página de Desarrollo de Software a la Medida en Ecuador y deseo consultar por el desarrollo de un programa para mi empresa." %}
+{% else %}
+  {% assign wa_context_raw = "Hola Dolsite, visito su sitio web y quisiera asesoría sobre relojes biométricos de asistencia o desarrollo de software a la medida en Ecuador." %}
+{% endif %}
+{% assign wa_context_encoded = wa_context_raw | url_encode %}
+{% assign wa_msg_bio = "Hola Dolsite, deseo cotizar un reloj biométrico de asistencia (huella y facial) con software para mi empresa en Ecuador." | url_encode %}
+{% assign wa_msg_soft = "Hola Dolsite, necesito asesoría en desarrollo de software a la medida / programas para mi empresa en Ecuador." | url_encode %}
 
 <div class="wa-float" id="wa-float">
+  {% if page.whatsapp_direct or page.layout == "post" %}
+  <a
+    href="https://wa.me/{{ wa_num }}?text={{ wa_context_encoded }}"
+    target="_blank"
+    rel="noopener noreferrer"
+    class="wa-trigger"
+    aria-label="{{ page.whatsapp_label | default: 'Cotizar por WhatsApp con un asesor en Ecuador' }}"
+  >
+    <span class="wa-icon" aria-hidden="true">{% include logo2.html %}</span>
+    <span class="wa-label">{{ page.whatsapp_cta_text | default: "WhatsApp Directo" }}</span>
+  </a>
+  {% else %}
   <div class="wa-popover" id="wa-popover" hidden aria-label="Opciones rápidas de WhatsApp">
     <div class="wa-popover-header">
-      <strong>Asesoría directa por WhatsApp</strong>
+      <strong>Asesoría directa en Ecuador</strong>
       <button type="button" class="wa-popover-close" id="wa-popover-close" aria-label="Cerrar menú de WhatsApp">&times;</button>
     </div>
-    <p class="wa-popover-sub">Selecciona tu necesidad para iniciar con un asesor en Ecuador:</p>
+    <p class="wa-popover-sub">Selecciona tu consulta para hablar con un especialista:</p>
     <div class="wa-popover-actions">
       <a
         href="https://wa.me/{{ wa_num }}?text={{ wa_msg_bio }}"
@@ -17,8 +40,8 @@
         rel="noopener noreferrer"
         class="wa-option"
       >
-        <span class="wa-option-title">Cotizar Sistema Biométrico</span>
-        <span class="wa-option-desc">Equipos ZKTeco, instalación y BioTime</span>
+        <span class="wa-option-title">Cotizar Reloj Biométrico</span>
+        <span class="wa-option-desc">Control de asistencia facial, huella y BioTime</span>
       </a>
       <a
         href="https://wa.me/{{ wa_num }}?text={{ wa_msg_soft }}"
@@ -27,7 +50,7 @@
         class="wa-option"
       >
         <span class="wa-option-title">Consultar Software a la Medida</span>
-        <span class="wa-option-desc">ERP, facturación SRI y automatización</span>
+        <span class="wa-option-desc">Programas para empresas, ERP y facturación SRI</span>
       </a>
     </div>
   </div>
@@ -45,7 +68,7 @@
   </button>
   <noscript>
     <a
-      href="https://wa.me/{{ wa_num }}?text={{ wa_msg_gen }}"
+      href="https://wa.me/{{ wa_num }}?text={{ wa_context_encoded }}"
       target="_blank"
       rel="noopener noreferrer"
       class="wa-trigger"
@@ -55,4 +78,5 @@
       <span class="wa-label">WhatsApp</span>
     </a>
   </noscript>
+  {% endif %}
 </div>

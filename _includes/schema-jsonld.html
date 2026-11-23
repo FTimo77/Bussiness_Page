@@ -8,7 +8,7 @@
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@type": ["ProfessionalService", "LocalBusiness"],
       "@id": "{{ site.url }}/#organization",
       "name": {{ site.data.company.legal_name | jsonify }},
       "alternateName": {{ site.data.company.company_name | jsonify }},
@@ -33,16 +33,24 @@
       },
       "areaServed": [
         {
+          "@type": "Country",
+          "name": "Ecuador"
+        },
+        {
+          "@type": "City",
+          "name": "Quito"
+        },
+        {
+          "@type": "City",
+          "name": "Guayaquil"
+        },
+        {
           "@type": "City",
           "name": "Ambato"
         },
         {
-          "@type": "AdministrativeArea",
-          "name": "Tungurahua"
-        },
-        {
-          "@type": "Country",
-          "name": "Ecuador"
+          "@type": "City",
+          "name": "Cuenca"
         }
       ],
       "openingHoursSpecification": [
@@ -66,16 +74,20 @@
       ],
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
-        "name": "Soluciones Informáticas y Biométricas Empresariales",
+        "name": "Catálogo de Relojes Biométricos y Desarrollo de Software en Ecuador",
         "itemListElement": [
           {
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Sistemas de Control de Asistencia y Acceso Biométrico",
-              "serviceType": "Venta, instalación y configuración de relojes biométricos",
-              "description": "Venta, instalación en sitio, configuración de software BioTime y soporte técnico de equipos biométricos ZKTeco de reconocimiento facial y huella digital en Ambato y todo Ecuador.",
-              "url": "{{ site.url }}/biometricos/",
+              "@id": "{{ site.url }}/relojes-biometricos-ecuador/#service",
+              "name": "Relojes Biométricos en Ecuador y Sistemas de Control de Asistencia",
+              "serviceType": "Venta, instalación y configuración de relojes biométricos de huella y reconocimiento facial",
+              "description": "Venta, instalación, configuración de software BioTime y soporte técnico de relojes biométricos ZKTeco (huella dactilar y reconocimiento facial) con reportes de nómina en Quito, Guayaquil, Ambato, Cuenca y todo Ecuador.",
+              "url": "{{ site.url }}/relojes-biometricos-ecuador/",
+              "provider": {
+                "@id": "{{ site.url }}/#organization"
+              },
               "areaServed": {
                 "@type": "Country",
                 "name": "Ecuador"
@@ -86,10 +98,14 @@
             "@type": "Offer",
             "itemOffered": {
               "@type": "Service",
-              "name": "Desarrollo de Software a la Medida",
-              "serviceType": "Desarrollo de software empresarial",
-              "description": "Diseño y desarrollo de sistemas empresariales ERP, facturación electrónica SRI, automatización de procesos y aplicaciones web adaptadas a PYMES y empresas en Ecuador.",
-              "url": "{{ site.url }}/software-a-medida/",
+              "@id": "{{ site.url }}/desarrollo-software-a-medida-ecuador/#service",
+              "name": "Desarrollo de Software a la Medida en Ecuador y Programas para Empresas",
+              "serviceType": "Desarrollo de software empresarial, ERP y facturación electrónica SRI",
+              "description": "Desarrollo de software a la medida y programas para empresas en Ecuador: sistemas ERP, facturación electrónica SRI, automatización de procesos e integración con relojes biométricos.",
+              "url": "{{ site.url }}/desarrollo-software-a-medida-ecuador/",
+              "provider": {
+                "@id": "{{ site.url }}/#organization"
+              },
               "areaServed": {
                 "@type": "Country",
                 "name": "Ecuador"
@@ -109,6 +125,26 @@
         "@id": "{{ site.url }}/#organization"
       }
     }
+    {% if page.schema_service_name %}
+    ,{
+      "@type": "Service",
+      "@id": "{{ current_page_url }}#pillar-service",
+      "name": {{ page.schema_service_name | jsonify }},
+      "serviceType": {{ page.schema_service_type | default: page.schema_service_name | jsonify }},
+      "description": {{ page.description | jsonify }},
+      "url": {{ current_page_url | jsonify }},
+      "provider": {
+        "@id": "{{ site.url }}/#organization"
+      },
+      "areaServed": [
+        { "@type": "Country", "name": "Ecuador" },
+        { "@type": "City", "name": "Quito" },
+        { "@type": "City", "name": "Guayaquil" },
+        { "@type": "City", "name": "Ambato" },
+        { "@type": "City", "name": "Cuenca" }
+      ]
+    }
+    {% endif %}
     {% if page.url != "/" and page.noindex != true %}
     ,{
       "@type": "BreadcrumbList",
@@ -124,8 +160,8 @@
         ,{
           "@type": "ListItem",
           "position": 2,
-          "name": "Biométricos",
-          "item": "{{ site.url }}/biometricos/"
+          "name": "Relojes Biométricos Ecuador",
+          "item": "{{ site.url }}/relojes-biometricos-ecuador/"
         },
         {
           "@type": "ListItem",

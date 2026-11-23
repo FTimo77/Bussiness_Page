@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign wa_num = site.data.company.whatsapp_number %}
-{% assign wa_product_msg = "Hola Dolsite, deseo cotizar el modelo " | append: page.title | append: " con instalación y software de asistencia." | url_encode %}
+{% assign wa_product_msg = "Hola Dolsite, estoy viendo el modelo " | append: page.title | append: " y deseo cotizar este equipo con instalación y software de asistencia en Ecuador." | url_encode %}
 
 <article class="product-detail-page">
   <section class="page-hero page-hero-compact">
@@ -10,7 +10,7 @@ layout: default
       <nav class="breadcrumb" aria-label="Ruta de navegación">
         <a href="{{ site.baseurl }}/">Inicio</a>
         <span aria-hidden="true">/</span>
-        <a href="{{ site.baseurl }}/biometricos/">Biométricos</a>
+        <a href="{{ site.baseurl }}/relojes-biometricos-ecuador/">Relojes Biométricos Ecuador</a>
         <span aria-hidden="true">/</span>
         <span aria-current="page">{{ page.title }}</span>
       </nav>
@@ -22,6 +22,7 @@ layout: default
             alt="{{ page.image_alt | default: page.title | escape }}"
             width="640"
             height="480"
+            fetchpriority="high"
             class="product-detail-img"
           />
           {% endif %}
@@ -70,15 +71,15 @@ layout: default
   <section class="section section-alt">
     <div class="container">
       <div class="section-header">
-        <h2>Otras soluciones de control de asistencia y software</h2>
-        <p>Explora el catálogo completo de relojes biométricos ZKTeco o consulta nuestro desarrollo de software empresarial.</p>
+        <h2>Explora nuestras soluciones empresariales en Ecuador</h2>
+        <p>Revisa todos los modelos de relojes biométricos ZKTeco o consulta por desarrollo de programas empresariales a la medida.</p>
       </div>
       <div class="internal-links-row">
-        <a href="{{ site.baseurl }}/biometricos/" class="btn btn-outline">
-          Ver catálogo completo de relojes biométricos
+        <a href="{{ site.baseurl }}/relojes-biometricos-ecuador/" class="btn btn-outline">
+          Ver catálogo de relojes biométricos en Ecuador
         </a>
-        <a href="{{ site.baseurl }}/software-a-medida/" class="btn btn-outline">
-          Conocer desarrollo de software a la medida
+        <a href="{{ site.baseurl }}/desarrollo-software-a-medida-ecuador/" class="btn btn-outline">
+          Conocer desarrollo de software a la medida en Ecuador
         </a>
       </div>
     </div>
